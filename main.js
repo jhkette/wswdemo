@@ -1,4 +1,6 @@
-window.onload = init;
+addEventListener('DOMContentLoaded', (event) => {
+    init()
+});
 
 function init() {
 
