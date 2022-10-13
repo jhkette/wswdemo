@@ -1,6 +1,7 @@
 window.onload = init;
 
 function init() {
+    loadEvents()
     const header = document.getElementById("header-container");
     window.addEventListener('scroll', debounce(hideNav));
     console.log(header)
@@ -66,3 +67,15 @@ function hideNav() {
         mainheader.style.opacity = '1';
     }
 }
+
+
+async function loadEvents(max=8){
+    try {
+      const endpoint = await fetch(`./.netlify/functions/callFetch?maxResults=${max}`);
+      const data = await endpoint.json();
+     console.log(data)
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
