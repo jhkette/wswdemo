@@ -1,33 +1,37 @@
-import fetch from 'node-fetch';
+import axios from 'axios';
+
+
+const axios = require('axios');
 
 const { CAL_API, CAL_ID } = process.env;
 const BASEPARAMS = `orderBy=startTime&singleEvents=true&timeMin=${new Date().toISOString()}`
 const BASEURL = `https://www.googleapis.com/calendar/v3/calendars/${CAL_ID}/events?${BASEPARAMS}`
 
-const HEADERS = {
-  
-  'Content-Type': 'application/json',
-  'Access-Control-Allow-Methods': 'GET',
-}
 
-export const handler = async function () {
+
+exports.handler  = function(event, context, callback){
   const finalURL = `${BASEURL}&key=${CAL_API}`
-  try {
-  
-      return fetch(finalURL)
-        .then((response) => response.json())
-        .then((data) => ({
-          statusCode: 200,
-          body: JSON.stringify(data.items),
-          HEADERS
-        }))
-    
-  } catch (e) {
-    console.error(e)
-    return {
-      statusCode: 500,
-      body: e.toString()
-    }
-  }
-}
 
+    // send repsonse
+    const send = body => {
+        callback(null, {
+            statusCode: 200,
+            headers: {
+              'Content-Type': 'application/json',
+              'Access-Control-Allow-Methods': 'GET',
+            },
+            body: JSON.stringify(body)
+          });
+    }
+       
+    const getdata = ()=> {
+        axios.get(url)
+        .then(res => send(res))
+        .catch(err => send(err))
+    }
+
+    if(event.httpMethod == 'GET'){
+        getdata();
+    }
+    
+}
