@@ -13,7 +13,7 @@ const HEADERS = {
 export const handler = async function () {
   const finalURL = `${BASEURL}&key=${CAL_API}`
   try {
-    if (event.httpMethod === 'GET') {
+  
       return fetch(finalURL)
         .then((response) => response.json())
         .then((data) => ({
@@ -21,10 +21,7 @@ export const handler = async function () {
           body: JSON.stringify(data.items),
           HEADERS
         }))
-    }
-    return {
-      statusCode: 401
-    }
+    
   } catch (e) {
     console.error(e)
     return {
