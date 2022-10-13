@@ -1,4 +1,4 @@
-import axios from 'axios';
+
 
 
 const axios = require('axios');
@@ -25,8 +25,8 @@ exports.handler  = function(event, context, callback){
     }
        
     const getdata = ()=> {
-        axios.get(url)
-        .then(res => send(res))
+        axios.get(finalURL)
+        .then(res => send(res.data))
         .catch(err => send(err))
     }
 
