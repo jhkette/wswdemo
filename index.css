@@ -384,6 +384,7 @@ header {
   list-style: none;
   display: flex;
   justify-content: space-around;
+  font-weight: 600;
 }
 
 /* //////////////////// list for our aims styling //////////// */
