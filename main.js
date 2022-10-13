@@ -1,10 +1,11 @@
 window.onload = init;
 
 function init() {
-    loadEvents()
+
     const header = document.getElementById("header-container");
     window.addEventListener('scroll', debounce(hideNav));
-    console.log(header)
+    loadEvents()
+  
   
   
     // icon.addEventListener('click', openNav);
@@ -24,7 +25,7 @@ function init() {
 // https://www.educative.io/answers/how-to-use-the-debounce-function-in-javascript
 
 // debounce to stop scroll event firing too often
-function debounce(func, wait = 10, immediate = true) {
+function debounce(func, wait = 20, immediate = true) {
     var timeout;
     return function () {
         var context = this,
