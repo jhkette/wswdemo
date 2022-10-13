@@ -10,8 +10,8 @@ const HEADERS = {
   'Access-Control-Allow-Methods': 'GET',
 }
 
-export const handler = async function (event, context) {
-  const finalURL = `${BASEURL}${event.queryStringParameters.maxResults ? `&maxResults=${event.queryStringParameters.maxResults}` : ''}&key=${CAL_API}`
+export const handler = async function () {
+  const finalURL = `${BASEURL}&key=${CAL_API}`
   try {
     if (event.httpMethod === 'GET') {
       return fetch(finalURL)
