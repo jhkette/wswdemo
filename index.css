@@ -1,0 +1,431 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+@font-face {
+  font-family: Cereal;
+  src: url("./fonts/AirbnbCereal_W_Md.otf") format("opentype");
+}
+
+/* @font-face {
+    font-family: GraublauWeb;
+    font-weight: bold;
+    src: url("path/GraublauWebBold.otf") format("opentype");
+} */
+
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-size: 62.5%;
+  color: #1a1a1a;
+}
+
+h1 {
+  font-family: Cereal, sans-serif;
+  font-size: 3.4rem;
+  display: block;
+  position: absolute;
+  left: 10%;
+  top: 19rem;
+  color: white;
+  /* text-transform: uppercase; */
+}
+
+h2 {
+  font-family: Cereal, sans-serif;
+  font-size: 2.05rem;
+  display: block;
+  padding-bottom: 0.1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.secondary h2 {
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.secondary h3 {
+  font-weight: 900;
+}
+.secondary li {
+  list-style: none;
+}
+
+.container-calender h3{
+  padding: 0;
+  display: inline-block;
+}
+.container-calender p{
+  padding: 0;
+}
+
+.container-calender li::before {
+  content: url("images/cal1.svg");
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+  /* background-image:  */
+  z-index: 5;
+}
+
+.secondary li {
+  color: white;
+}
+
+p {
+  font-size: 1.1rem;
+  font-family: "open sans", serif;
+  padding: 1rem 0;
+  line-height: 1.6;
+}
+
+a{
+  font-size: 1.1rem;
+  font-family: "open sans", serif;
+  padding: .5rem 0;
+  line-height: 1.6;
+  color: #1a1a1a;
+  text-decoration: none;
+}
+ul {
+  list-style-type: circle;
+}
+
+li {
+  font-size: 1.1rem;
+  font-family: "open sans", serif;
+  padding: 1rem 0;
+  line-height: 1.6;
+}
+
+.container-news h2{
+  margin-bottom: 2rem;
+}
+
+.container-news h3{
+  font-family: Cereal, sans-serif;
+  display: block;
+  font-weight: 900;
+  font-size: 1.3rem;
+  color: white;
+  
+  
+
+}
+
+
+.container-news a{
+  /* border-top: 1px solid rgba(255, 255, 255, 0.223); */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.138);
+  color: white;
+  width: 100%;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+header {
+  height: 8rem;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8%;
+  position: fixed;
+  top: 0rem;
+  width: 86%;
+  z-index: 5;
+  transition: .8s;
+}
+
+#header-container.small {
+  height: 4rem;
+}
+
+.banner {
+  margin-top: 7rem;
+  background-image: url("images/wsw1.jpeg");
+  height: 31.5rem;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+
+  position: relative;
+ 
+}
+
+#logo{
+  height: 80px;
+  background-image: url('images/WSW_siteLogo870.png');
+  background-position: center;
+  background-size: cover;
+  width: 387px;
+  transition: .8s;
+}
+
+#logo.small{
+  background-image: url('images/WSW_siteLogo870.png');
+  background-position: center;
+  background-size: cover;
+  width: 291px;
+  height: 60px;
+}
+
+/* join button */
+.join {
+  border-radius: 0.5rem;
+  width: 9em;
+  height: 3.2rem;
+  border: 1px solid black;
+  background-color: #ce0000;
+  font-size: 1.8rem;
+  font-size: 1.1rem;
+  color: white;
+}
+
+/* containers */
+
+.lead {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem 8%;
+  border-top: 7px solid rgb(207, 9, 9);
+}
+
+.lead article{
+  width: 50%;
+  padding: 0 2rem;
+}
+
+
+.secondary {
+  background-color: #252525;
+  padding: 3rem 8%;
+  display: flex;
+  flex-direction: row;
+}
+
+.secondary .container-news {
+  padding: 0 2rem;
+  width: 50%;
+}
+
+.secondary .container-calender {
+  padding: 0 2rem;
+  width: 50%;
+}
+
+
+
+.container-footer{
+  height: 10rem;
+  background-color: #a7a7a7;
+}
+
+.secondary p {
+  color: white;
+}
+
+
+
+@media only screen and (max-width: 720px) {
+  .lead {
+    flex-direction: column;
+  }
+}
+
+/* chevron */
+.chevron::before {
+	border-style: solid;
+	border-width: 0.1em 0.1em 0 0;
+	content: '';
+	display: inline-block;
+	height: 0.4rem;
+	left: 0;
+	position: relative;
+	top: 0.85rem;
+	transform: rotate(45deg);
+	vertical-align: top;
+	width: 0.4rem;
+  color: white;
+  -webkit-transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+
+/* navigation */
+
+.main-nav ul {
+  width: 20rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* //////////////////// list for our aims styling //////////// */
+.list-intro {
+  list-style: none;
+}
+
+.list-intro li{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  
+  
+}
+
+.list-intro li img{
+  min-width: 4rem;
+}
+
+.list-intro h3 {
+  font-weight: 900;
+  font-size: 1.3rem;
+}
+
+.bike {
+  height: 36px;
+  filter: invert(7%) sepia(85%) saturate(7352%) hue-rotate(2deg) brightness(119%) contrast(109%);
+ 
+}
+
+.trophy{
+  height: 40px;
+  filter: invert(7%) sepia(85%) saturate(7352%) hue-rotate(2deg) brightness(119%) contrast(109%);
+ 
+}
+
+.community{
+  height: 44px;
+ 
+  filter: invert(7%) sepia(85%) saturate(7352%) hue-rotate(2deg) brightness(119%) contrast(109%);
+}
+
+/* ///////////////           end of our aims styles  ////////////////////////////////////// */
+
+
