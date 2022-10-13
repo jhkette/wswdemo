@@ -71,7 +71,7 @@ function hideNav() {
 
 async function loadEvents(max=8){
     try {
-      const endpoint = await fetch(`./.netlify/functions/callFetch?maxResults=${max}`);
+      const endpoint = await fetch(`https://animated-churros-b6d807.netlify.app/.netlify/functions/callFetch?maxResults=${max}`);
       const data = await endpoint.json();
      console.log(data)
     } catch (e) {
