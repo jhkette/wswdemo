@@ -66,8 +66,13 @@ function hideNav() {
 
 const formatDate = (date) => {
    const splitDate = date.split("-");
-   return `${splitDate[2]}.${splitDate[1]}.${splitDate[0]}`
+   console.log(splitDate[1], 'this is month')
+   const month = getMonth(parseInt((splitDate[1]))-1)
+   return `${splitDate[2]} ${month} ${splitDate[0]}`
 }
+
+
+const getMonth = (month) => ['January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][month];
 
 async function loadEvents() {
   try {
