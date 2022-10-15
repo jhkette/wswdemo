@@ -378,12 +378,21 @@ li {
 .join {
   border-radius: 0.5rem;
   width: 9em;
-  height: 3.2rem;
+  height: 3rem;
   border: 1px solid black;
   background-color: #ce0000;
+  margin-top: 1rem;
   font-size: 1.8rem;
   font-size: 1.1rem;
   color: white;
+  transition: .5s;
+  text-decoration: none;
+}
+
+.join:hover{
+  background-color: #202124;
+  color: white;
+  cursor: pointer;
 }
 
 /* containers */
