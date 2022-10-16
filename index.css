@@ -144,27 +144,34 @@ body {
 /************* main typography ************** */
 
 h1 {
-  font-family: Cereal, sans-serif;
-  font-size: 3.4rem;
+  font-family: 'Manrope', sans-serif;
+  font-size: 3rem;
   display: block;
   position: absolute;
   left: 10%;
-  top: 19rem;
+  top: 20rem;
   color: white;
+  font-weight: 800;
   /* text-transform: uppercase; */
 }
 
+.title-small{
+  font-size: 1.9rem;
+  top: 24rem;
+}
+
 h2 {
-  font-family: Cereal, sans-serif;
-  font-size: 2.05rem;
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.95rem;
   display: block;
-  padding-bottom: 0.1rem;
-  margin-bottom: 1rem;
+  padding-bottom: 1.1rem;
+  margin-bottom: .9rem;
   border-bottom: 1px solid #202124;
+  font-weight: 600;
 }
 
 h3 {
-  font-family: Cereal, sans-serif;
+  font-family: 'Manrope', sans-serif;
 }
 
 p {
@@ -196,7 +203,7 @@ li {
 /* main header */
 #header-container {
   background-color: #f4f4f4;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   position: fixed;
   top: 0rem;
   width: 100%;
@@ -313,9 +320,9 @@ li {
 /* banner */
 
 .banner {
-  margin-top: 7rem;
+  margin-top: 6rem;
   background-image: url("images/wsw1.jpeg");
-  height: 31.5rem;
+  height: 32.5rem;
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
@@ -379,7 +386,7 @@ li {
   border-radius: 0.5rem;
   width: 9em;
   height: 3rem;
-  border: 1px solid black;
+ border: 0;
   background-color: #ce0000;
   margin-top: 1rem;
   font-size: 1.8rem;
