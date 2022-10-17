@@ -46,6 +46,8 @@ function hideNav() {
   // const commonlinks = document.getElementById("commonlinkscontainer");
   // const logo = document.getElementById("logoimage");
   // const logonav = document.getElementById("logonav");
+ const common = document.getElementById("commonlinks-cont");
+ 
   const mainheader = document.getElementById("header-container");
   const logo = document.getElementById("logo");
 
@@ -54,7 +56,7 @@ function hideNav() {
     logo.classList.add("small");
     // logo.classList.add("small");
     // logonav.classList.add("nopadding");
-    // commonlinks.style.top = '-100px';
+    common.style.display = 'none';
     mainheader.style.opacity = ".95";
   } else {
     // logo.classList.remove("small");
@@ -62,6 +64,7 @@ function hideNav() {
     logo.classList.remove("small");
     // logonav.classList.remove("nopadding");
     // commonlinks.style.top = '0px';
+    common.style.display = 'block';
     mainheader.style.opacity = "1";
   }
 }
