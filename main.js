@@ -54,7 +54,7 @@ function hideNav() {
   if (currentScrollPos > 200) {
     mainheader.classList.add("small");
     logo.classList.add("small");
-    // logo.classList.add("small");
+    common.classList.add("vanish");
     // logonav.classList.add("nopadding");
     common.style.display = 'none';
     mainheader.style.opacity = ".95";
@@ -62,7 +62,7 @@ function hideNav() {
     // logo.classList.remove("small");
     mainheader.classList.remove("small");
     logo.classList.remove("small");
-    // logonav.classList.remove("nopadding");
+    common.classList.remove("vanish");
     // commonlinks.style.top = '0px';
     common.style.display = 'block';
     mainheader.style.opacity = "1";

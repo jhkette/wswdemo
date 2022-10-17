@@ -348,11 +348,11 @@ li {
  position: relative;
  width: 100%;
  top: 0;
- transition: .4s;
+ transition: 1s;
 }
 
 .common-container .vanish{
-  top: -100px;
+  top: -80px;
 }
 
 .common-links-nav{
