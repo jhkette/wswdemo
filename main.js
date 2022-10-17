@@ -3,6 +3,8 @@ addEventListener("DOMContentLoaded", (event) => {
 });
 
 function init() {
+  const icon = document.getElementById("nav-icon1");
+  icon.addEventListener('click', openNav);
   const header = document.getElementById("header-container");
   window.addEventListener("scroll", debounce(hideNav));
   loadEvents();
@@ -104,6 +106,14 @@ async function loadEvents() {
   } catch (e) {
     console.log(e);
   }
+}
+
+
+function openNav() {
+  const icon = document.getElementById("nav-icon1");
+  // const navigation = document.getElementById('navigation');
+  // navigation.classList.toggle('openmob');
+  icon.classList.toggle('open');
 }
 
 //   var paragraph = document.getElementById("p");
