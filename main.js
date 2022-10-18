@@ -88,7 +88,7 @@ async function loadEvents() {
 
     data.items.slice(0, 3).map((item) => {
       const newLi = document.createElement("li");
-      const newP3 = document.createElement("h3");
+      const newP3 = document.createElement("p");
       
       const newContent = document.createTextNode(item.summary);
       newP3.append(newContent);

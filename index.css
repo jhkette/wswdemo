@@ -171,7 +171,7 @@ h2 {
   font-family: "Manrope", Arial, sans-serif;
   font-size: 1.95rem;
   display: block;
-  padding-bottom: 1.1rem;
+  padding-bottom: .9rem;
   margin-bottom: 0.9rem;
   color: #3e3e3e;
   border-bottom: 1px solid #797c8689;
@@ -180,6 +180,9 @@ h2 {
 
 h3 {
   font-family: "Manrope", sans-serif;
+  font-size: 1.75rem;
+  color: #3e3e3e;
+  font-weight: 900;
 }
 
 p {
@@ -288,7 +291,7 @@ li {
 
 /* main header */
 #header-container {
-  background-color: #f4f4f4;
+  background-color: #e8e8e8;
   /* background: linear-gradient(90deg,  #f4f4f4 39% #edededfe 100%); opacity: 1; */
   padding: 0.5rem 0;
   position: fixed;
@@ -296,6 +299,7 @@ li {
   width: 100%;
   z-index: 5;
   transition: 0.8s;
+  border-bottom: 1px solid #a0a0a0;
 }
 
 #header-container.small {
@@ -404,6 +408,11 @@ li {
   border-top: 7px solid rgb(207, 9, 9);
 }
 
+.lead.two{
+
+  border-top: 1px solid #a0a0a0;
+}
+
 .lead article {
   width: 50%;
 }
@@ -483,8 +492,8 @@ li {
 }
 
 .secondary h2 {
-  color: white;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.501);
+  color: #3e3e3e;
+  border-bottom: 1px solid #3e3e3e;
 }
 
 .secondary h3 {
@@ -492,7 +501,7 @@ li {
 }
 .secondary li {
   list-style: none;
-  color: white;
+  color: #3e3e3e;
 }
 
 .container-calender h3 {
@@ -521,13 +530,13 @@ li {
   display: block;
   font-weight: 900;
   font-size: 1.3rem;
-  color: white;
+  color: #202124;
 }
 
 .container-news a {
   /* border-top: 1px solid rgba(255, 255, 255, 0.223); */
   border-bottom: 1px solid rgba(255, 255, 255, 0.138);
-  color: white;
+  color: #202124;
   width: 100%;
   display: block;
   margin-bottom: .5rem;
@@ -573,7 +582,7 @@ li {
 
 /* secondary container */
 .secondary {
-  background: linear-gradient(100deg, #252525 0%, #2a2929 100%); opacity: 1;
+  background: #e8e8e8;
 
   padding: 3rem 10%;
   display: flex;
@@ -596,7 +605,7 @@ li {
 }
 
 .secondary p {
-  color: white;
+  color: #202124;
 }
 
 @media only screen and (max-width: 1020px) {
@@ -648,12 +657,12 @@ li {
 .author-flex{
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .parentauthor {
-  width: 16em;
-  height: 16em;
+  width: 25rem;
+  height: 25rem;
   margin: auto;
   overflow: hidden;
   margin: 0 .5em 1em .5em;
@@ -719,17 +728,17 @@ display: none;
 }
 
 .authorimage.one {
-  background-image: url('../images/books/swift.jpg');
+  background-image: url('./images/bike1.jpg');
 }
 
 .authorimage.two {
-  background-image: url('../images/books/percy_shelly.jpeg');
+  background-image: url('./images/bike2.jpg');
 }
 
 .authorimage.three {
-  background-image: url('../images/books/virginia_woolf.jpg');
+  background-image: url('./images/bike3.jpg');
 }
 
 .authorimage.four {
-  background-image: url('../images/books/rare.jpg');
+  background-image: url('./images/bike1.jpg');
 }
