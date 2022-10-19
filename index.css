@@ -169,10 +169,10 @@ h1 {
 
 h2 {
   font-family: "Manrope", Arial, sans-serif;
-  font-size: 1.95rem;
+  font-size: 1.75rem;
   display: block;
-  padding-bottom: .9rem;
-  margin-bottom: 0.9rem;
+  padding-bottom: .4rem;
+  margin-bottom: 0.5rem;
   color: #3e3e3e;
   border-bottom: 1px solid #797c8689;
   font-weight: 900;
@@ -180,7 +180,7 @@ h2 {
 
 h3 {
   font-family: "Manrope", sans-serif;
-  font-size: 1.75rem;
+  font-size: 1.2rem;
   color: #3e3e3e;
   font-weight: 900;
 }
@@ -291,7 +291,7 @@ li {
 
 /* main header */
 #header-container {
-  background-color: #e8e8e8;
+  background-color: #eeeeee;
   /* background: linear-gradient(90deg,  #f4f4f4 39% #edededfe 100%); opacity: 1; */
   padding: 0.5rem 0;
   position: fixed;
@@ -299,7 +299,7 @@ li {
   width: 100%;
   z-index: 5;
   transition: 0.8s;
-  border-bottom: 1px solid #a0a0a0;
+  border-bottom: 1px solid #d5d4d4;
 }
 
 #header-container.small {
@@ -405,12 +405,15 @@ li {
   flex-direction: row;
   padding: 2rem 10%;
  
-  border-top: 7px solid rgb(207, 9, 9);
+  border-top: 4px solid rgb(207, 9, 9);
 }
 
 .lead.two{
-
-  border-top: 1px solid #a0a0a0;
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid #d5d4d4;
+  padding: 2rem 10%;
+  justify-content: space-between;
 }
 
 .lead article {
@@ -444,6 +447,10 @@ li {
   align-items: center;
 }
 
+.list-intro h3{
+  font-size: 1.2rem;
+}
+
 .list-intro p {
   padding-top: 0;
 }
@@ -452,10 +459,8 @@ li {
   min-width: 4rem;
 }
 
-.list-intro h3 {
-  font-weight: 900;
-  font-size: 1.3rem;
-}
+
+
 
 .bike {
   height: 36px;
@@ -504,7 +509,7 @@ li {
   color: #3e3e3e;
 }
 
-.container-calender h3 {
+.container-calender p {
   padding: 0;
   display: inline-block;
 }
@@ -529,7 +534,7 @@ li {
 .container-news h3 {
   display: block;
   font-weight: 900;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #202124;
 }
 
@@ -549,7 +554,7 @@ li {
 }
 .join {
   border-radius: 0.5rem;
-  padding: 0.7rem 2.5rem;
+  padding: 0.7rem 1.9rem;
   border: 0;
   background-color: #ce0000;
   margin-top: 2rem;
@@ -582,7 +587,7 @@ li {
 
 /* secondary container */
 .secondary {
-  background: #e8e8e8;
+  background: #eeeeee;
 
   padding: 3rem 10%;
   display: flex;
@@ -654,19 +659,29 @@ li {
 
 /* Author display grid */
 
+.image-container {
+  margin-bottom: 3rem;
+}
+
 .author-flex{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
+}
+
+.lead.two h2{
+  margin-bottom: 0;
+  padding-bottom: .1rem;
+  margin-bottom: .3rem;
+  border: 0;
 }
 
 .parentauthor {
-  width: 25rem;
-  height: 25rem;
+  width: 30rem;
+  height: 22rem;
   margin: auto;
   overflow: hidden;
   margin: 0 .5em 1em .5em;
-
 }
 
 .authorimage {
@@ -691,7 +706,7 @@ li {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(145, 180, 162, 0.897);
+  background-color: rgba(208, 24, 21, 0.396)
 }
 
 .parentauthor:hover .authorimage:before,
@@ -702,8 +717,9 @@ li {
 /* Hidden text content unless :hover state is activated */
 .parentauthor span {
 color: white;
-font-size: 1.7em;
-font-family: Georgia, serif;
+font-size: 1.5rem;
+font-family: 'Manrope', sans-serif;
+font-weight: 900;
 margin: auto;
 top: 0;
 left:0;
@@ -711,7 +727,7 @@ right:0;
 position:absolute;
 text-align:center;
 padding: .4em;
-margin-top: 3.6em;
+margin-top: 8rem;
 width: 80%;
 display: none;
 }
