@@ -127,6 +127,7 @@ body {
   width: 100vw;
   line-height: 1;
   font-size: 62.5%;
+
 }
 ol,
 ul {
@@ -307,7 +308,7 @@ li {
   z-index: 5;
   transition: 0.8s;
   border-bottom: 1px solid #d5d4d4;
- 
+ z-index: 5000;
 }
 
 .mobile-nav{
@@ -334,7 +335,8 @@ li {
 
 .mobile-nav ul li {
   display: block;
-  border-bottom: #9a9a9a;
+  border-bottom: 1px solid #c1c1c1;
+  margin-right: 4rem;
 }
 
 .mobile-nav.open{
@@ -465,7 +467,7 @@ li {
   display: flex;
   flex-direction: row;
   padding: 2rem 10%;
- 
+
   border-top: 4px solid rgb(207, 9, 9);
 }
 
@@ -547,14 +549,36 @@ li {
 /* banner */
 
 .banner {
-  margin-top: 3.5rem;
-  background-image: url("images/wsw1.jpeg");
+  position: absolute;
+  top: 3.5rem;
+
+  width: 100%;
+  transition: .6s;
   height: 35.5rem;
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
+}
 
+/* .none{
+  display: none;
+} */
+
+#lead{
+  background-image: url("images/wsw1.jpeg");
+}
+
+#lead2{
+  background-image: url("images/WSW_AngelHill.jpeg");
+}
+
+#lead3{
+  background-image: url("images/westSuffolkCross2018-1.jpeg");
+}
+
+.main-body{
   position: relative;
+  top: 39rem;
 }
 
 .secondary h2 {
@@ -695,7 +719,7 @@ li {
 }
 
 .container-footer {
-  height: 20rem;
+  height: auto;
   background-color: #eeeeee;
 }
 
@@ -725,7 +749,7 @@ li {
 /* Author display grid */
 
 .image-container {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .author-flex{
@@ -751,8 +775,8 @@ li {
 
 @media only screen and (max-width: 1020px) {
   .parentauthor {
-    width: 22rem;
-    height: 22rem;
+    width: 19rem;
+    height: 19rem;
 
   }
 
@@ -780,7 +804,8 @@ li {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(208, 24, 21, 0.396)
+  background-color: rgba(208, 24, 21, 0.396);
+
 }
 
 .parentauthor:hover .authorimage:before,
@@ -815,6 +840,7 @@ display: none;
 
 .parentauthor:hover .authorimage {
   transform: scale(1.2);
+  border-radius: .8rem;
 }
 
 .authorimage.one {
@@ -851,37 +877,58 @@ display: none;
 /* footer */
 
 footer {
-  width: 85%;
-  max-width: 1400px;
+ 
+ 
   margin: auto;
-  padding: 3em 0;
+  padding: 2rem 10%;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
 }
 
-footer nav {
-  margin: 0em 6em 0 0;
+
+@media (max-width: 900px) {
+ footer{
+  justify-content: center;
+  align-items: center;
+ }
 }
 
-footer h4 {
+
+
+
+footer nav {
+  margin: 0em 6rem 0 0;
+}
+
+footer h3 {
   border-bottom: 1px solid #1a1a1a;
   display: inline-block;
-  padding-right: 4em;
+  padding-right: 3rem;
 }
 
+.twitter{
+  /* margin-left: auto; */
+  margin-right: 5rem;
+}
+
+
+
+
 footer nav ul {
-  font-size: 1em;
+ 
   list-style: none;
+  margin-right: 4rem;
 }
 
 footer nav ul li {
-  margin: 1em 0;
-  padding-bottom: .2em;
+  margin: 1rem 0;
+  padding-bottom: .2rem;
 
 }
 
 footer nav ul li a {
   color: #1a1a1a;
+  font-size: .95rem;
   text-decoration: none;
 }

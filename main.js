@@ -9,6 +9,19 @@ function init() {
   window.addEventListener("scroll", debounce(hideNav));
   loadEvents();
 
+  bannerLoop();
+
+  if (url == "/index.html" || "/") {
+    setTimeout(function () {
+        document.getElementById('lead1').classList.remove('none');
+        document.getElementById('lead2').classList.remove('none');
+       
+       }, 300)
+    
+    bannerLoop();
+}
+}
+
   // icon.addEventListener('click', openNav);
   // var url = window.location.pathname;
   // if (url == "/index.html" || "/") {
@@ -20,7 +33,7 @@ function init() {
 
   //     bannerLoop();
   // }
-}
+
 
 // https://www.educative.io/answers/how-to-use-the-debounce-function-in-javascript
 
