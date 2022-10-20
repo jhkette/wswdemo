@@ -236,7 +236,7 @@ li {
   transition: 0.5s ease-in-out;
   cursor: pointer;
   top: 0.35rem;
-  z-index: 5;
+  z-index: 10000;
 }
 
 #nav-icon1 span {
@@ -318,7 +318,7 @@ li {
   top: 0;
   width: 45%;
   right: -300px;
- 
+  
   background-color: #eeeeee;
   transition: .2s;
 }
@@ -346,7 +346,7 @@ li {
   top: 0;
   right: 0px;
   width: 45%;
-  z-index: 4;
+  z-index: 1501;
   transition: .2s;
 }
 
@@ -554,7 +554,7 @@ li {
 
   width: 100%;
   transition: .6s;
-  height: 35.5rem;
+  height: 36.5rem;
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
@@ -578,7 +578,7 @@ li {
 
 .main-body{
   position: relative;
-  top: 39rem;
+  top: 40rem;
 }
 
 .secondary h2 {
@@ -766,7 +766,7 @@ li {
 }
 
 .parentauthor {
-  width: 26rem;
+  width: 28rem;
   height: 21rem;
   margin: auto;
   overflow: hidden;
