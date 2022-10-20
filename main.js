@@ -55,15 +55,12 @@ function hideNav() {
     mainheader.classList.add("small");
     logo.classList.add("small");
     common.classList.add("vanish");
-    // logonav.classList.add("nopadding");
     common.style.display = 'none';
     mainheader.style.opacity = ".95";
   } else {
-    // logo.classList.remove("small");
     mainheader.classList.remove("small");
     logo.classList.remove("small");
     common.classList.remove("vanish");
-    // commonlinks.style.top = '0px';
     common.style.display = 'block';
     mainheader.style.opacity = "1";
   }
@@ -113,9 +110,9 @@ async function loadEvents() {
 
 
 function openNav() {
+  const mobileNav = document.getElementById("mobile-nav")
   const icon = document.getElementById("nav-icon1");
-  // const navigation = document.getElementById('navigation');
-  // navigation.classList.toggle('openmob');
+  mobileNav.classList.toggle('open')
   icon.classList.toggle('open');
 }
 
