@@ -60,3 +60,12 @@ function bannerLoop() {
     }
 }
 
+function displayText() {
+
+    const texts = document.querySelectorAll('.heading-text');
+    texts.forEach(function (text) {
+        text.style.display = "block";
+        text.style.zIndex = "4000";
+    })
+    console.log(texts)
+}

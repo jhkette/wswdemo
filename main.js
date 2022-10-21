@@ -10,11 +10,12 @@ function init() {
   loadEvents();
 
   bannerLoop();
-
+  displayText()
+  var url = window.location.pathname;
   if (url == "/index.html" || "/") {
     setTimeout(function () {
-        document.getElementById('lead1').classList.remove('none');
-        document.getElementById('lead2').classList.remove('none');
+        document.getElementById("lead2").classList.remove('none');
+        document.getElementById("lead3").classList.remove('none');
        
        }, 300)
     
@@ -95,14 +96,15 @@ async function loadEvents() {
     const data = await endpoint.json();
 
     const list = document.getElementById("calender-list");
-
+    if (data.items.length >= 3) {
     data.items.slice(0, 3).map((item) => {
       const newLi = document.createElement("li");
       const newP3 = document.createElement("h3");
-      
+      const createAnchor = document.createElement('a');
+      createAnchor.setAttribute('href', item.htmlLink);
       const newContent = document.createTextNode(item.summary);
       newP3.append(newContent);
-      
+      createAnchor.append(newP3)
       const newP = document.createElement("p");
       const newDesc = document.createTextNode(item.description);
       newP.append(newDesc)
@@ -111,11 +113,14 @@ async function loadEvents() {
       const date = document.createTextNode(formatDate(item.start.date));
       newP2.append(date)
       
-      newLi.append(newP3,newP2, newP)
+      newLi.append(createAnchor,newP2, newP)
       list.append(newLi);
      
       console.log(item, item.summary, item.start.date, item.description);
+    
+      
     });
+  }
   } catch (e) {
     console.log(e);
   }
