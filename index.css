@@ -771,7 +771,7 @@ li {
   transform: rotate(45deg);
   vertical-align: top;
   width: 0.4rem;
-  color: white;
+  color: #353535;
   -webkit-transition: 1s ease-in-out;
   -moz-transition: 1s ease-in-out;
   -o-transition: 1s ease-in-out;
