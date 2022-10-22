@@ -9,7 +9,7 @@ function init() {
   window.addEventListener("scroll", debounce(hideNav));
   loadEvents();
 
-  bannerLoop();
+
   displayText()
   var url = window.location.pathname;
   if (url == "/index.html" || "/") {
