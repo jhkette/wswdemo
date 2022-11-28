@@ -6,7 +6,18 @@ function init() {
   const icon = document.getElementById("nav-icon1");
   icon.addEventListener('click', openNav);
   const header = document.getElementById("header-container");
+  
   window.addEventListener("scroll", debounce(hideNav));
+  const read = document.querySelectorAll(".readmore")
+
+  read.forEach((element) => {
+    element.addEventListener('mouseover',()=>readMore(element))
+    element.addEventListener('mouseleave',()=>readMoreLeave(element))
+  })
+ 
+    // 
+
+ 
   loadEvents();
 
 
@@ -126,6 +137,18 @@ async function loadEvents() {
   }
 }
 
+const readMore = (element) => {
+
+  const chevron = document.getElementById(element.childNodes[1].id);
+  chevron.classList.add('move')
+ 
+}
+
+const readMoreLeave = (element) => {
+  const chevron = document.getElementById(element.childNodes[1].id);
+  chevron.classList.remove('move')
+ }
+ 
 
 function openNav() {
   const mobileNav = document.getElementById("mobile-nav")

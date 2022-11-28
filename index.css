@@ -101,9 +101,6 @@ section {
   display: block;
 }
 
-* {
-  box-sizing: border-box;
-}
 
 
 
@@ -607,9 +604,30 @@ li {
   border-bottom: 1px solid #3e3e3e;
 }
 
-.secondary h3 {
+.feature-item h3 {
   font-weight: 900;
 }
+
+.fa-chevron-right{
+  font-size: .7rem;
+  padding-right: 0;
+  margin-right: 0;
+  
+  transition: .3s;
+
+}
+.container-chevron{
+  display: inline-block;
+  transition: .2s;
+  position: relative;
+  bottom: .05rem;
+  /* margin-bottom: .4rem; */
+}
+.container-chevron.move{
+  transform: translateX(.3rem)
+}
+
+  
 .secondary li {
   list-style: none;
   color: #3e3e3e;
