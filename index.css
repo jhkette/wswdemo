@@ -177,6 +177,7 @@ h2 {
 h3 {
   font-family: "Manrope", sans-serif;
   font-size: 1.2rem;
+
   color: #3e3e3e;
   font-weight: 900;
 }
@@ -805,11 +806,12 @@ li {
   justify-content: space-around;
 }
 
-.lead.two h2{
+.lead.two h3{
   margin-bottom: 0;
   padding-bottom: .1rem;
   margin-bottom: 1.3rem;
   font-size: 1.2rem;
+  border-bottom: 1px solid #797c86b7;
 }
 
 .parentauthor {
@@ -903,15 +905,15 @@ display: none;
 }
 
 .authorimage.two {
-  background-image: url('./images/bike2.jpg');
+  background-image: url('./images/Cycling_12.jpeg');
 }
 
 .authorimage.three {
-  background-image: url('./images/bike3.jpg');
+  background-image: url('./images/cycling-race.jpg');
 }
 
 .authorimage.four {
-  background-image: url('./images/track.jpg');
+  background-image: url('./images/group-ride.jpeg');
 }
 
 
