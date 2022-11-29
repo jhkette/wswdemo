@@ -808,7 +808,7 @@ li {
 
 .lead.two h3{
   margin-bottom: 0;
-  padding-bottom: .1rem;
+  padding-bottom: .4rem;
   margin-bottom: 1.3rem;
   font-size: 1.2rem;
   border-bottom: 1px solid #797c86b7;
@@ -905,7 +905,7 @@ display: none;
 }
 
 .authorimage.two {
-  background-image: url('./images/Cycling_12.jpeg');
+  background-image: url('./images/Cycling_12.jpg');
 }
 
 .authorimage.three {
@@ -913,7 +913,7 @@ display: none;
 }
 
 .authorimage.four {
-  background-image: url('./images/group-ride.jpeg');
+  background-image: url('./images/group-ride.jpg');
 }
 
 
