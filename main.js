@@ -14,6 +14,16 @@ function init() {
     element.addEventListener('mouseover',()=>readMore(element))
     element.addEventListener('mouseleave',()=>readMoreLeave(element))
   })
+
+
+  const image = document.querySelectorAll(".image-container")
+  console.log(image)
+  image.forEach((element) => {
+    element.addEventListener('mouseover',()=>featureEffect(element))
+    element.addEventListener('mouseleave',()=>featureEffectRemove(element))
+    
+    // element.addEventListener('mouseleave',()=>readMoreLeave(element))
+  })
  
     // 
 
@@ -93,7 +103,7 @@ function hideNav() {
 
 const formatDate = (date) => {
    const splitDate = date.split("-");
-   console.log(splitDate[1], 'this is month')
+ 
    const month = getMonth(parseInt((splitDate[1]))-1)
    return `${splitDate[2]} ${month} ${splitDate[0]}`
 }
@@ -105,7 +115,7 @@ async function loadEvents() {
   try {
     const endpoint = await fetch(`./.netlify/functions/callFetch`);
     const data = await endpoint.json();
-    console.log(data)
+  
 
     const list = document.getElementById("calender-list");
     if (data.items.length >= 3) {
@@ -128,7 +138,7 @@ async function loadEvents() {
       newLi.append(createAnchor,newP2, newP)
       list.append(newLi);
      
-      console.log(item, item.summary, item.start.date, item.description);
+      
     
       
     });
@@ -146,6 +156,7 @@ const readMore = (element) => {
 }
 
 const readMoreLeave = (element) => {
+  
   const chevron = document.getElementById(element.childNodes[1].id);
   chevron.classList.remove('move')
  }
@@ -156,6 +167,18 @@ function openNav() {
   const icon = document.getElementById("nav-icon1");
   mobileNav.classList.toggle('open')
   icon.classList.toggle('open');
+}
+
+const featureEffect = (element) => {
+
+  const imageContainer = document.getElementById(element.childNodes[3].id);
+  imageContainer.classList.add('line')
+}
+
+const featureEffectRemove = (element) => {
+
+  const imageContainer = document.getElementById(element.childNodes[3].id);
+  imageContainer.classList.remove('line')
 }
 
 //   var paragraph = document.getElementById("p");
