@@ -154,7 +154,7 @@ h1 {
   left: 10%;
   top: 20rem;
   color: white;
-  font-weight: 900;
+  font-weight: 800;
   /* text-transform: uppercase; */
 }
 
@@ -179,7 +179,7 @@ h3 {
   font-size: 1.2rem;
 
   color: #3e3e3e;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 p {
@@ -605,8 +605,13 @@ li {
   
 }
 
+.feature-item {
+  padding: 1rem 0;
+
+}
+
 .feature-item h3 {
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .fa-chevron-right{
@@ -664,9 +669,7 @@ li {
   z-index: 5;
 }
 
-.container-news h2 {
-  margin-bottom: 2rem;
-}
+
 
 .container-news h3 {
   display: block;
@@ -681,7 +684,8 @@ li {
   color: #202124;
   width: 100%;
   display: block;
-  margin-bottom: .5rem;
+  padding: 0;
+  
 }
 
 /* join button */
@@ -726,7 +730,7 @@ li {
 .secondary {
   background: #eeeeee;
 
-  padding: 3rem 10%;
+  padding: 5.5rem 10%;
   display: flex;
   flex-direction: row;
 }
@@ -737,7 +741,7 @@ li {
 }
 
 .secondary .container-news p{
-  padding: 0.5rem 0;
+  padding:  0;
 }
 
 
@@ -746,9 +750,6 @@ li {
   width: 50%;
 }
 
-.secondary p {
-  color: #202124;
-}
 
 @media only screen and (max-width: 1020px) {
   .secondary {
