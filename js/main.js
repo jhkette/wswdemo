@@ -1,3 +1,9 @@
+import Glide from '@glidejs/glide'
+import '../index.css'
+
+
+const glide = new Glide()
+
 addEventListener("DOMContentLoaded", (event) => {
   init();
 });
