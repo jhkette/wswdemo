@@ -9,9 +9,9 @@ if (process.env.NODE_ENV === 'production') {
   } else {
     module.exports = {
       plugins: {
-        autoprefixer: {},
+        // autoprefixer: {},
        
-        'rucksack-css': {},
+        // 'rucksack-css': {},
       },
     };
   }
