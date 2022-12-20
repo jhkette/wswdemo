@@ -1,5 +1,7 @@
 import Glide from '@glidejs/glide'
 import '../index.css'
+import '../activities.css'
+import "./../node_modules/@glidejs/glide/dist/css/glide.core.min.css"
 
 
 const glide = new Glide()

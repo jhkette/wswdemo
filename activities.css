@@ -1,0 +1,29 @@
+.main-body-template{
+    position: relative;
+    top: 8.5rem;
+    display: block;
+}
+
+.lead.subpage{
+    border: 0;
+    justify-content: space-between;
+}
+
+.secondary-nav{
+    width: 25rem;
+    margin-right: 4.5rem;
+}
+
+.secondary-nav ul{
+    list-style: none;
+}
+
+.secondary-nav ul li{
+    padding: 0.5rem .5rem;
+    border-bottom: 1px solid #797c86b7;
+    width: 100%;
+}
+
+#current{
+    background-color: #eeeeee;
+}
