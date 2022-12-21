@@ -169,7 +169,7 @@ h2 {
   display: block;
   padding-bottom: .4rem;
   margin-bottom: 0.5rem;
-  color: #3e3e3e;
+  color: #484848;
   border-bottom: 1px solid #797c86b7;
   font-weight: 700;
 }
@@ -178,7 +178,7 @@ h3 {
   font-family: "Manrope", sans-serif;
   font-size: 1.2rem;
 
-  color: #3e3e3e;
+  color: #484848;
   font-weight: 700;
 }
 
@@ -431,13 +431,14 @@ li {
 .main-nav {
   transition: 1s;
   height: auto;
+  
 }
 
 .main-nav ul {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  font-weight: 400;
+  font-weight: 500;
   width: 22rem;
  
 }
@@ -601,7 +602,7 @@ li {
 }
 
 .secondary h2 {
-  color: #3e3e3e;
+  color: #484848;
   
 }
 
@@ -636,7 +637,7 @@ li {
   
 .secondary li {
   list-style: none;
-  color: #3e3e3e;
+  color: #484848;
 }
 
 .container-calender p {
@@ -818,12 +819,12 @@ li {
 }
 
 .lead.two h3.line{
-  border-bottom: 1px solid #3e3e3e;
+  border-bottom: 1px solid #484848;
  
 }
 
 .parentauthor {
-  width: 33rem;
+  width: 31rem;
   height: 21rem;
   margin: auto;
   overflow: hidden;

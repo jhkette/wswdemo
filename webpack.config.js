@@ -67,8 +67,12 @@ module.exports = {
       template: "index.html",
     }),
     new HtmlWebpackPlugin({
-      filename: 'example.html',
-      template: 'example.html',
+      filename: 'activities.html',
+      template: 'activities.html',
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'events.html',
+      template: 'events.html',
     }),
 
   ],
