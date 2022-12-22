@@ -1,4 +1,4 @@
-import HeroSlider from "./banner";
+import heroSlider from "./banner";
 import "../index.css";
 import "../activities.css";
 import "./../node_modules/@glidejs/glide/dist/css/glide.core.min.css";
@@ -7,7 +7,7 @@ import "./../node_modules/@glidejs/glide/dist/css/glide.core.min.css";
 
 
 
-const heroSlider = new HeroSlider()
+
 
 
 addEventListener("DOMContentLoaded", (event) => {
@@ -15,6 +15,7 @@ addEventListener("DOMContentLoaded", (event) => {
 });
 
 function init() {
+  heroSlider()
   const icon = document.getElementById("nav-icon1");
   icon.addEventListener("click", openNav);
   const header = document.getElementById("header-container");

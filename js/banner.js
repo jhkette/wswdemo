@@ -1,7 +1,7 @@
 import Glide from "@glidejs/glide"
 
-class HeroSlider {
-  constructor() {
+function heroSlider () {
+ 
     if (document.querySelector(".hero-slider")) {
       // count how many slides there are
       const dotCount = document.querySelectorAll(".hero-slider__slide").length
@@ -25,9 +25,9 @@ class HeroSlider {
 
       glide.mount()
     }
-  }
+  
 }
 
-export default HeroSlider
+export default heroSlider
 
 
