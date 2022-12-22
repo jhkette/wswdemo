@@ -1,10 +1,14 @@
-import Glide from '@glidejs/glide'
-import '../index.css'
-import '../activities.css'
-import "./../node_modules/@glidejs/glide/dist/css/glide.core.min.css"
+import HeroSlider from "./banner";
+import "../index.css";
+import "../activities.css";
+import "./../node_modules/@glidejs/glide/dist/css/glide.core.min.css";
+
+// const glide = new Glide();
 
 
-const glide = new Glide()
+
+const heroSlider = new HeroSlider()
+
 
 addEventListener("DOMContentLoaded", (event) => {
   init();
@@ -12,58 +16,44 @@ addEventListener("DOMContentLoaded", (event) => {
 
 function init() {
   const icon = document.getElementById("nav-icon1");
-  icon.addEventListener('click', openNav);
+  icon.addEventListener("click", openNav);
   const header = document.getElementById("header-container");
-  
+
   window.addEventListener("scroll", debounce(hideNav));
-  const read = document.querySelectorAll(".readmore")
+  const read = document.querySelectorAll(".readmore");
 
   read.forEach((element) => {
-    element.addEventListener('mouseover',()=>readMore(element))
-    element.addEventListener('mouseleave',()=>readMoreLeave(element))
-  })
+    element.addEventListener("mouseover", () => readMore(element));
+    element.addEventListener("mouseleave", () => readMoreLeave(element));
+  });
 
-
-  const image = document.querySelectorAll(".image-container")
-  console.log(image)
+  const image = document.querySelectorAll(".image-container");
+  console.log(image);
   image.forEach((element) => {
-    element.addEventListener('mouseover',()=>featureEffect(element))
-    element.addEventListener('mouseleave',()=>featureEffectRemove(element))
-    
-    // element.addEventListener('mouseleave',()=>readMoreLeave(element))
-  })
- 
-    // 
+    element.addEventListener("mouseover", () => featureEffect(element));
+    element.addEventListener("mouseleave", () => featureEffectRemove(element));
 
- 
+    // element.addEventListener('mouseleave',()=>readMoreLeave(element))
+  });
+
+  //
+
   loadEvents();
 
-
-  displayText()
-  var url = window.location.pathname;
-  if (url == "/index.html" || "/") {
-    setTimeout(function () {
-        document.getElementById("lead2").classList.remove('none');
-        document.getElementById("lead3").classList.remove('none');
-       
-       }, 300)
-    
-    bannerLoop();
-}
+ 
 }
 
-  // icon.addEventListener('click', openNav);
-  // var url = window.location.pathname;
-  // if (url == "/index.html" || "/") {
-  //     setTimeout(function () {
-  //         document.getElementById('lead1').classList.remove('none');
-  //         document.getElementById('lead2').classList.remove('none');
-  //         displayText();
-  //        }, 500)
+// icon.addEventListener('click', openNav);
+// var url = window.location.pathname;
+// if (url == "/index.html" || "/") {
+//     setTimeout(function () {
+//         document.getElementById('lead1').classList.remove('none');
+//         document.getElementById('lead2').classList.remove('none');
+//         displayText();
+//        }, 500)
 
-  //     bannerLoop();
-  // }
-
+//     bannerLoop();
+// }
 
 // https://www.educative.io/answers/how-to-use-the-debounce-function-in-javascript
 
@@ -89,8 +79,8 @@ function hideNav() {
   // const commonlinks = document.getElementById("commonlinkscontainer");
   // const logo = document.getElementById("logoimage");
   // const logonav = document.getElementById("logonav");
- const common = document.getElementById("commonlinks-cont");
- 
+  const common = document.getElementById("commonlinks-cont");
+
   const mainheader = document.getElementById("header-container");
   const logo = document.getElementById("logo");
 
@@ -98,172 +88,101 @@ function hideNav() {
     mainheader.classList.add("small");
     logo.classList.add("small");
     common.classList.add("vanish");
-    common.style.display = 'none';
+    common.style.display = "none";
     mainheader.style.opacity = ".95";
   } else {
     mainheader.classList.remove("small");
     logo.classList.remove("small");
     common.classList.remove("vanish");
-    common.style.display = 'block';
+    common.style.display = "block";
     mainheader.style.opacity = "1";
   }
 }
 
 const formatDate = (date) => {
-   const splitDate = date.split("-");
- 
-   const month = getMonth(parseInt((splitDate[1]))-1)
-   return `${splitDate[2]} ${month} ${splitDate[0]}`
-}
+  const splitDate = date.split("-");
 
+  const month = getMonth(parseInt(splitDate[1]) - 1);
+  return `${splitDate[2]} ${month} ${splitDate[0]}`;
+};
 
-const getMonth = (month) => ['January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][month];
+const getMonth = (month) =>
+  [
+    "January",
+    "Febuary",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ][month];
 
 async function loadEvents() {
   try {
     const endpoint = await fetch(`./.netlify/functions/callFetch`);
     const data = await endpoint.json();
-  
 
     const list = document.getElementById("calender-list");
     if (data.items.length >= 3) {
-    data.items.slice(0, 3).map((item) => {
-      const newLi = document.createElement("li");
-      const newP3 = document.createElement("h3");
-      const createAnchor = document.createElement('a');
-      createAnchor.setAttribute('href', item.htmlLink);
-      const newContent = document.createTextNode(item.summary);
-      newP3.append(newContent);
-      createAnchor.append(newP3)
-      const newP = document.createElement("p");
-      const newDesc = document.createTextNode(item.description);
-      newP.append(newDesc)
-      
-      const newP2 = document.createElement("p");
-      const date = document.createTextNode(formatDate(item.start.date));
-      newP2.append(date)
-      
-      newLi.append(createAnchor,newP2, newP)
-      list.append(newLi);
-     
-      
-    
-      
-    });
-  }
+      data.items.slice(0, 3).map((item) => {
+        const newLi = document.createElement("li");
+        const newP3 = document.createElement("h3");
+        const createAnchor = document.createElement("a");
+        createAnchor.setAttribute("href", item.htmlLink);
+        const newContent = document.createTextNode(item.summary);
+        newP3.append(newContent);
+        createAnchor.append(newP3);
+        const newP = document.createElement("p");
+        const newDesc = document.createTextNode(item.description);
+        newP.append(newDesc);
+
+        const newP2 = document.createElement("p");
+        const date = document.createTextNode(formatDate(item.start.date));
+        newP2.append(date);
+
+        newLi.append(createAnchor, newP2, newP);
+        list.append(newLi);
+      });
+    }
   } catch (e) {
     console.log(e);
   }
 }
 
 const readMore = (element) => {
-
   const chevron = document.getElementById(element.childNodes[1].id);
-  chevron.classList.add('move')
- 
-}
+  chevron.classList.add("move");
+};
 
 const readMoreLeave = (element) => {
-  
   const chevron = document.getElementById(element.childNodes[1].id);
-  chevron.classList.remove('move')
- }
- 
+  chevron.classList.remove("move");
+};
 
 function openNav() {
-  const mobileNav = document.getElementById("mobile-nav")
+  const mobileNav = document.getElementById("mobile-nav");
   const icon = document.getElementById("nav-icon1");
-  mobileNav.classList.toggle('open')
-  icon.classList.toggle('open');
+  mobileNav.classList.toggle("open");
+  icon.classList.toggle("open");
 }
 
 const featureEffect = (element) => {
-
   const imageContainer = document.getElementById(element.childNodes[3].id);
-  imageContainer.classList.add('line')
-}
+  imageContainer.classList.add("line");
+};
 
 const featureEffectRemove = (element) => {
-
   const imageContainer = document.getElementById(element.childNodes[3].id);
-  imageContainer.classList.remove('line')
-}
+  imageContainer.classList.remove("line");
+};
 
-//   var paragraph = document.getElementById("p");
-// var text = document.createTextNode("This just got added");
-
-// paragraph.appendChild(text);
+// new Glide('.glide').mount()
 
 
 
-var bannerStatus = 1;
-var bannerTimer = 11000;
 
-var startBannerTimer = setInterval(function () {
-    bannerLoop();
-}, bannerTimer)
-
-function bannerLoop() {
-    // select all and use array.from - converts html collection to an array. 
-    // means we can access index
-    const images = Array.from(document.querySelectorAll('.banner'));
-    
-   
-    
-    if (bannerStatus === 1) {
-        images[1].style.opacity = 0;
-        setTimeout(function () {
-            images[0].style.right = "0px";
-            images[0].style.zIndex = "1000";
-            images[1].style.right = "-100%";
-            images[1].style.zIndex = "1500";
-            images[2].style.right = "100%";
-            images[2].style.zIndex = "500";
-        }, 500)
-        setTimeout(function () {
-            images[1].style.opacity = "1";
-            
-        }, 1000)
-        bannerStatus = 2;
-    } else if (bannerStatus === 2) {
-        images[2].style.opacity = 0;
-        setTimeout(function () {
-            images[1].style.right = "0px";
-            images[1].style.zIndex = "1000";
-            images[2].style.right = "-100%";
-            images[2].style.zIndex = "1500";
-            images[0].style.right = "100%";
-            images[0].style.zIndex = "500";
-
-        }, 500)
-        setTimeout(function () {
-            images[2].style.opacity = "1";
-        }, 1000)
-        bannerStatus = 3;
-    } else if (bannerStatus === 3) {
-        images[0].style.opacity = 0;
-        setTimeout(function () {
-            images[2].style.right = "0px";
-            images[2].style.zIndex = "1000";
-            images[0].style.right = "-100%";
-            images[0].style.zIndex = "1500";
-            images[1].style.right = "100%";
-            images[1].style.zIndex = "500";
-
-        }, 500)
-        setTimeout(function () {
-            images[0].style.opacity = "1";
-        }, 1000)
-        bannerStatus = 1;
-    }
-}
-
-function displayText() {
-
-    const texts = document.querySelectorAll('.heading-text');
-    texts.forEach(function (text) {
-        text.style.display = "block";
-        text.style.zIndex = "4000";
-    })
-    console.log(texts)
-}

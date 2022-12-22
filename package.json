@@ -22,6 +22,7 @@
   "name": "frontpage",
   "version": "1.0.0",
   "main": "main.js",
+  
   "scripts": {
     "build": "webpack",
     "dev": "webpack serve"

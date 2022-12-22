@@ -74,6 +74,10 @@ module.exports = {
       filename: 'events.html',
       template: 'events.html',
     }),
+    new HtmlWebpackPlugin({
+      filename: 'slider.html',
+      template: 'slider.html',
+    }),
 
   ],
 };

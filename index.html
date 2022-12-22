@@ -21,9 +21,9 @@
       referrerpolicy="no-referrer"
     />
 
-    <link rel="stylesheet" href="./dist/main.css" />
+    <link rel="stylesheet" href="./index.css" />
     <script src="./js/main.js"></script>
-    <script src="./js/banner.js"></script>
+   
     
 
     <title>Document</title>
@@ -56,7 +56,7 @@
             <ul>
               <li>Home</li>
               <li><a href="activities.html">Activities</a></li>
-              <li><a href="events.html">Activities</a></li>
+              <li><a href="events.html">Events</a></li>
               <li>News</li>
               <li>Info</li>
             </ul>
@@ -69,15 +69,39 @@
         </div>
       </header>
     </div>
-    <div class="banner" id="lead">
-      <h2 class="heading-text">Yorkshire Dales Weekend</h2>
-    </div>
-    <div class="banner none" id="lead2">
-      <h2 class="heading-text">Anniversary photo on Angel Hill</h2>
-    </div>
-
-    <div class="banner none" id="lead3">
-      <h2 class="heading-text">West Suffolk Cyclo-Cross</h2>
+    <div class="hero-slider">
+      <div data-glide-el="track" class="glide__track">
+        <div class="glide__slides">
+          <div class="hero-slider__slide" id="lead">
+            <div class="hero-slider__interior container">
+              <div class="hero-slider__overlay">
+                <h2 class="headline headline--medium t-center">Free Transportation</h2>
+                <p class="t-center">All students have free unlimited bus fare.</p>
+                <p class="t-center no-margin"><a href="#" class="btn btn--blue">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="hero-slider__slide" id="lead2">
+            <div class="hero-slider__interior container">
+              <div class="hero-slider__overlay">
+                <h2 class="headline headline--medium t-center">An Apple a Day</h2>
+                <p class="t-center">Our dentistry program recommends eating apples.</p>
+                <p class="t-center no-margin"><a href="#" class="btn btn--blue">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="hero-slider__slide" id="lead3">
+            <div class="hero-slider__interior container">
+              <div class="hero-slider__overlay">
+                <h2 class="headline headline--medium t-center">Free Food</h2>
+                <p class="t-center">Fictional University offers lunch plans for those in need.</p>
+                <p class="t-center no-margin"><a href="#" class="btn btn--blue">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider__bullets glide__bullets" data-glide-el="controls[nav]"></div>
+      </div>
     </div>
     <div class="main-body">
       <div class="lead">

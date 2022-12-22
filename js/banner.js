@@ -1,71 +1,33 @@
-var bannerStatus = 1;
-var bannerTimer = 11000;
+import Glide from "@glidejs/glide"
 
-var startBannerTimer = setInterval(function () {
-    bannerLoop();
-}, bannerTimer)
+class HeroSlider {
+  constructor() {
+    if (document.querySelector(".hero-slider")) {
+      // count how many slides there are
+      const dotCount = document.querySelectorAll(".hero-slider__slide").length
 
-function bannerLoop() {
-    // select all and use array.from - converts html collection to an array. 
-    // means we can access index
-    const images = Array.from(document.querySelectorAll('.banner'));
-    
-   
-    
-    if (bannerStatus === 1) {
-        images[1].style.opacity = 0;
-        setTimeout(function () {
-            images[0].style.right = "0px";
-            images[0].style.zIndex = "1000";
-            images[1].style.right = "-100%";
-            images[1].style.zIndex = "1500";
-            images[2].style.right = "100%";
-            images[2].style.zIndex = "500";
-        }, 500)
-        setTimeout(function () {
-            images[1].style.opacity = "1";
-            
-        }, 1000)
-        bannerStatus = 2;
-    } else if (bannerStatus === 2) {
-        images[2].style.opacity = 0;
-        setTimeout(function () {
-            images[1].style.right = "0px";
-            images[1].style.zIndex = "1000";
-            images[2].style.right = "-100%";
-            images[2].style.zIndex = "1500";
-            images[0].style.right = "100%";
-            images[0].style.zIndex = "500";
+      // Generate the HTML for the navigation dots
+      let dotHTML = ""
+      for (let i = 0; i < dotCount; i++) {
+        dotHTML += `<button class="slider__bullet glide__bullet" data-glide-dir="=${i}"></button>`
+      }
 
-        }, 500)
-        setTimeout(function () {
-            images[2].style.opacity = "1";
-        }, 1000)
-        bannerStatus = 3;
-    } else if (bannerStatus === 3) {
-        images[0].style.opacity = 0;
-        setTimeout(function () {
-            images[2].style.right = "0px";
-            images[2].style.zIndex = "1000";
-            images[0].style.right = "-100%";
-            images[0].style.zIndex = "1500";
-            images[1].style.right = "100%";
-            images[1].style.zIndex = "500";
+      // Add the dots HTML to the DOM
+      document.querySelector(".glide__bullets").insertAdjacentHTML("beforeend", dotHTML)
 
-        }, 500)
-        setTimeout(function () {
-            images[0].style.opacity = "1";
-        }, 1000)
-        bannerStatus = 1;
+      // Actually initialize the glide / slider script
+      var glide = new Glide(".hero-slider", {
+        type: "carousel",
+        perView: 1,
+        autoplay: 4500,
+        gap: 0
+      })
+
+      glide.mount()
     }
+  }
 }
 
-function displayText() {
+export default HeroSlider
 
-    const texts = document.querySelectorAll('.heading-text');
-    texts.forEach(function (text) {
-        text.style.display = "block";
-        text.style.zIndex = "4000";
-    })
-    console.log(texts)
-}
+

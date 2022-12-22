@@ -371,11 +371,11 @@ li {
 }
 
 #logo {
-  height: 80px;
+  height: 70px;
   background-image: url("images/WSW_siteLogo870.png");
   background-position: center;
   background-size: cover;
-  width: 387px;
+  width: 338px;
   transition: 0.8s;
 }
 
@@ -598,7 +598,7 @@ li {
 
 .main-body{
   position: relative;
-  top: 40rem;
+  top: 6.3rem;
 }
 
 .secondary h2 {
@@ -997,4 +997,117 @@ footer nav ul li a {
   color: #1a1a1a;
   font-size: .95rem;
   text-decoration: none;
+}
+
+
+
+/* slider */
+
+.hero-slider {
+  position: relative;
+  top: 6.4rem;
+}
+.hero-slider div {
+  outline: none;
+}
+.hero-slider__interior {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media (min-width: 960px) {
+  .hero-slider__interior {
+    padding-top: 130px;
+    padding-bottom: 130px;
+ }
+}
+.hero-slider__slide {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+.hero-slider__overlay {
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.68);
+  padding: 40px;
+  color: #fff;
+}
+@media (min-width: 960px) {
+  .hero-slider__overlay {
+    width: 50%;
+ }
+}
+.slick-dots {
+  z-index: 100;
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  top: 15px;
+}
+@media (min-width: 960px) {
+  .slick-dots {
+    top: 50px;
+ }
+}
+.slick-dots li {
+  list-style: none;
+  display: inline;
+}
+.slick-dots li button {
+  display: inline-block;
+  text-indent: -9999px;
+  font-size: 0;
+  line-height: 0;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  border: none;
+  margin: 0 4px;
+  padding: 0;
+  outline: none;
+  transition: background-color 0.3s ease-out;
+  cursor: pointer;
+}
+.slick-dots .slick-active button {
+  background-color: #fff;
+}
+/* GlideJS */
+.glide__bullets {
+  z-index: 100;
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  top: 15px;
+}
+@media (min-width: 960px) {
+  .glide__bullets {
+    top: 50px;
+ }
+}
+.glide__bullets button {
+  display: inline-block;
+  text-indent: -9999px;
+  font-size: 0;
+  line-height: 0;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  border: none;
+  margin: 0 3px;
+  padding: 0;
+  outline: none;
+  transition: background-color 0.3s ease-out;
+  cursor: pointer;
+}
+.glide__bullets button.glide__bullet--active {
+  background-color: #fff;
 }
