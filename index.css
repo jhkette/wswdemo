@@ -165,13 +165,22 @@ h1 {
 
 h2 {
   font-family: "Manrope", Arial, sans-serif;
-  font-size: 1.75rem;
+  font-size: 1.55rem;
   display: block;
-  padding-bottom: .4rem;
+  padding-bottom: .2rem;
   margin-bottom: 0.5rem;
   color: #484848;
   border-bottom: 1px solid #797c86b7;
   font-weight: 700;
+}
+
+.heading-text{
+  color: white;
+  font-size: 3rem;
+  border: 0;
+  padding: 6.5rem 0 3rem 0;
+  position: relative;
+  top: 5.5rem;
 }
 
 h3 {
@@ -1026,9 +1035,9 @@ footer nav ul li a {
   background-position: center bottom;
 }
 .hero-slider__overlay {
-  margin: 0 auto;
+  margin-left: 10%;
   /* background-color: rgba(0, 0, 0, 0.68); */
-  padding: 40px;
+ 
   color: #fff;
 }
 @media (min-width: 960px) {
@@ -1084,11 +1093,11 @@ footer nav ul li a {
   padding: 0;
   margin: 0;
   text-align: center;
-  top: 450px;
+  top: 420px;
 }
 @media (min-width: 960px) {
   .glide__bullets {
-    top: 450px;
+    top: 420px;
  }
 }
 .glide__bullets button {
