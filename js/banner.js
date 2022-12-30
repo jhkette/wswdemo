@@ -16,6 +16,7 @@ function heroSlider () {
       document.querySelector(".glide__bullets").insertAdjacentHTML("beforeend", dotHTML)
 
       // Actually initialize the glide / slider script
+      // carousel type , 1 view of image, 4.5 sec delay and no gap between slides.
       var glide = new Glide(".hero-slider", {
         type: "carousel",
         perView: 1,

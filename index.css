@@ -176,9 +176,9 @@ h2 {
 
 .heading-text{
   color: white;
-  font-size: 3rem;
+  font-size: 2.7rem;
   border: 0;
-  padding: 6.5rem 0 3rem 0;
+  padding: 8.5rem 0 3rem 0;
   position: relative;
   top: 5.5rem;
 }
@@ -955,7 +955,7 @@ footer {
  
  
   margin: auto;
-  padding: 2rem 10%;
+  padding: 5rem 10%;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -1093,11 +1093,11 @@ footer nav ul li a {
   padding: 0;
   margin: 0;
   text-align: center;
-  top: 420px;
+  top: 460px;
 }
 @media (min-width: 960px) {
   .glide__bullets {
-    top: 420px;
+    top: 460px;
  }
 }
 .glide__bullets button {
@@ -1105,8 +1105,8 @@ footer nav ul li a {
   text-indent: -9999px;
   font-size: 0;
   line-height: 0;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
   border-radius: 50%;
