@@ -5,14 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900family=Open+Sans:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700display=swap" rel="stylesheet">
+    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -20,11 +16,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
     <link rel="stylesheet" href="./index.css" />
-    <script src="./js/main.js"></script>
-   
-    
+    <script src="./dist/main.js"></script>
 
     <title>Document</title>
   </head>
@@ -100,7 +93,7 @@
         <div class="slider__bullets glide__bullets" data-glide-el="controls[nav]"></div>
       </div>
     </div>
-    <div class="main-body">
+    <main class="main-body">
       <div class="lead">
         <article class="container-club">
           <h2>The Club</h2>
@@ -163,12 +156,12 @@
           </ul>
         </article>
       </div>
-      <div class="secondary">
+      <div class="container-secondary">
         <article class="container-news">
           <h2>Latest News</h2>
           <article class="feature-item">
             <h3>Title</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, eos vitae consectetur voluptates odit fugit voluptate molestias numquam, minima suscipit earum facilis repellendus assumenda exercitationem. Incidunt praesentium nobis doloribus dignissimos?</p>
             <a href="#" class="readmore"
               >Read more
               <div class="container-chevron" id="chevron">
@@ -178,7 +171,7 @@
           </article>
           <article class="feature-item">
             <h3>Title</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis maiores quia quibusdam delectus fugit facere maxime temporibus nostrum dolorem, quam itaque rerum quasi inventore quis dolores unde eius esse nesciunt?</p>
             <a href="#" class="readmore"
               >Read more
               <div class="container-chevron" id="chevron1">
@@ -186,60 +179,58 @@
                 ><i class="fa-solid fa-chevron-right"></i></div
             ></a>
           </article>
-          <article class="feature-item">
-            <h3>Title</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <a href="#" class="readmore"
-              >Read more
-              <div class="container-chevron" id="chevron2">
-                <i class="fa-solid fa-chevron-right"></i
-                ><i class="fa-solid fa-chevron-right"></i></div
-            ></a>
-          </article>
+    
+        </article>
+        <article class="container-twitter">
+          <h2>Twitter</h2>
         </article>
 
-        <article class="container-calender">
-          <h2>Calender</h2>
-          <ul id="calender-list"></ul>
-        </article>
+
+      
       </div>
-      <section class="lead two">
-        <div class="image-container">
-          <div class="parentauthor">
-            <a href="#">
-              <div class="authorimage one"></div>
-            </a>
+      <div class="container-third">
+        <section class="cal-information">
+          <h2>News</h2>
+          <article class="container-news">
+            <h2>Latest News</h2>
+         
+            <h2>Calender</h2>
+            <ul id="calender-list"></ul>
+        </section>
+        <section class="container-images">
+          <div class="image-container">
+            <div class="imagelink">
+              <a href="#">
+                <div class="authorimage one"></div>
+              </a>
+            </div>
+            <h3 id="activities">Activities</h3>
           </div>
-          <h3 id="activities">Activities</h3>
-        </div>
-        <div class="image-container">
-          <div class="parentauthor">
-            <a href="#">
-              <div class="authorimage two"></div>
-            </a>
+          <div class="image-container">
+            <div class="imagelink">
+              <a href="#">
+                <div class="authorimage two"></div>
+              </a>
+            </div>
+            <h3 id="events">Events</h3>
           </div>
-          <h3 id="events">Events</h3>
-        </div>
-
-        <div class="image-container">
-          <div class="parentauthor">
-            <a href="#">
-              <div class="authorimage three"></div>
-            </a>
+  
+      
+  
+          <div class="image-container">
+            <div class="imagelink">
+              <!-- cc licensed from https://www.flickr.com/photos/medmss/6882587043 -->
+              <a href="#">
+                <div class="authorimage four"></div>
+              </a>
+            </div>
+            <h3 id="information">Information</h3>
           </div>
-          <h3 id="news">News</h3>
-        </div>
-
-        <div class="image-container">
-          <div class="parentauthor">
-            <!-- cc licensed from https://www.flickr.com/photos/medmss/6882587043 -->
-            <a href="#">
-              <div class="authorimage four"></div>
-            </a>
-          </div>
-          <h3 id="information">Information</h3>
-        </div>
-      </section>
+        </section>
+      </div>
+     
+     
+    </main>
       <div class="container-footer">
         <footer>
           <div>
@@ -264,6 +255,6 @@
           </div>
         </footer>
       </div>
-    </div>
+   
   </body>
 </html>

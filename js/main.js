@@ -122,7 +122,7 @@ async function loadEvents() {
   try {
     const endpoint = await fetch(`./.netlify/functions/callFetch`);
     const data = await endpoint.json();
-
+    console.log(data)
     const list = document.getElementById("calender-list");
     if (data.items.length >= 3) {
       data.items.slice(0, 3).map((item) => {

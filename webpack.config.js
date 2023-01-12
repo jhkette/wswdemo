@@ -12,7 +12,7 @@ module.exports = {
   // define output path - 
   output: {
     path: path.resolve(__dirname, "dist"),  // path directory for all files is dist
-    filename: "[name][contenthash].js", // filename for js files - with contenthash
+    filename: "[name].js", // filename for js files - with contenthash
     clean: true, 
     assetModuleFilename: "images/[name][ext]", // ensure images go to an images folder
   },
@@ -50,6 +50,7 @@ module.exports = {
         test: /\.(svg|png|jpg|gif)$/i,
         type: "asset/resource",
       },
+    
     ],
   },
   optimization: {
@@ -73,6 +74,14 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'events.html',
       template: 'events.html',
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'news.html',
+      template: 'news.html',
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'info.html',
+      template: 'info.html',
     }),
   ],
 };
