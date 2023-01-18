@@ -1,7 +1,8 @@
 import Glide from "@glidejs/glide"
 
-function heroSlider () {
- 
+
+class HeroSlider {
+  constructor() {
     if (document.querySelector(".hero-slider")) {
       // count how many slides there are
       const dotCount = document.querySelectorAll(".hero-slider__slide").length
@@ -16,19 +17,20 @@ function heroSlider () {
       document.querySelector(".glide__bullets").insertAdjacentHTML("beforeend", dotHTML)
 
       // Actually initialize the glide / slider script
-      // carousel type , 1 view of image, 4.5 sec delay and no gap between slides.
       var glide = new Glide(".hero-slider", {
         type: "carousel",
         perView: 1,
-        autoplay: 4500,
-        gap: 0
+        autoplay: 3000
       })
 
       glide.mount()
     }
-  
+  }
 }
 
-export default heroSlider
+export default HeroSlider
+
+
+
 
 

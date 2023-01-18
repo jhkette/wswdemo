@@ -1,16 +1,25 @@
-import heroSlider from "./banner";
+// import HeroSlider from "./banner";
 import "../index.css";
 import "../activities.css";
 import "./../node_modules/@glidejs/glide/dist/css/glide.core.min.css";
+// import "./../fonts/Inter-Medium.woff2"
+// import "./../fonts/Inter-Medium.woff"
+// import "./../fonts/Inter-Regular.woff2"
+// import "./../fonts/Inter-Regular.woff"
 
 
 
-addEventListener("DOMContentLoaded", (event) => {
+
+window.addEventListener('load', function () {
   init();
 });
 
 function init() {
-  heroSlider()
+
+  // var heroSlider = new HeroSlider();
+
+ 
+  
   const icon = document.getElementById("nav-icon1");
   icon.addEventListener("click", openNav);
   const header = document.getElementById("header-container");
@@ -34,7 +43,7 @@ function init() {
 
   //
 
-  loadEvents();
+
 
  
 }
@@ -118,37 +127,37 @@ const getMonth = (month) =>
     "December",
   ][month];
 
-async function loadEvents() {
-  try {
-    const endpoint = await fetch(`./.netlify/functions/callFetch`);
-    const data = await endpoint.json();
-    console.log(data)
-    const list = document.getElementById("calender-list");
-    if (data.items.length >= 3) {
-      data.items.slice(0, 3).map((item) => {
-        const newLi = document.createElement("li");
-        const newP3 = document.createElement("h3");
-        const createAnchor = document.createElement("a");
-        createAnchor.setAttribute("href", item.htmlLink);
-        const newContent = document.createTextNode(item.summary);
-        newP3.append(newContent);
-        createAnchor.append(newP3);
-        const newP = document.createElement("p");
-        const newDesc = document.createTextNode(item.description);
-        newP.append(newDesc);
+// async function loadEvents() {
+//   try {
+//     const endpoint = await fetch(`./.netlify/functions/callFetch`);
+//     const data = await endpoint.json();
+//     console.log(data)
+//     const list = document.getElementById("calender-list");
+//     if (data.items.length >= 3) {
+//       data.items.slice(0, 3).map((item) => {
+//         const newLi = document.createElement("li");
+//         const newP3 = document.createElement("h3");
+//         const createAnchor = document.createElement("a");
+//         createAnchor.setAttribute("href", item.htmlLink);
+//         const newContent = document.createTextNode(item.summary);
+//         newP3.append(newContent);
+//         createAnchor.append(newP3);
+//         const newP = document.createElement("p");
+//         const newDesc = document.createTextNode(item.description);
+//         newP.append(newDesc);
 
-        const newP2 = document.createElement("p");
-        const date = document.createTextNode(formatDate(item.start.date));
-        newP2.append(date);
+//         const newP2 = document.createElement("p");
+//         const date = document.createTextNode(formatDate(item.start.date));
+//         newP2.append(date);
 
-        newLi.append(createAnchor, newP2, newP);
-        list.append(newLi);
-      });
-    }
-  } catch (e) {
-    console.log(e);
-  }
-}
+//         newLi.append(createAnchor, newP2, newP);
+//         list.append(newLi);
+//       });
+//     }
+//   } catch (e) {
+//     console.log(e);
+//   }
+// }
 
 const readMore = (element) => {
   const chevron = document.getElementById(element.childNodes[1].id);

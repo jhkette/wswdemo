@@ -32,19 +32,18 @@
 }
 
 .container{
-    display: flex;
-
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    grid-template-rows: 200px;
     justify-content: space-around;
-    align-items: flex-start;
+    
 }
 
 .image-container.activities{
     height: 15rem;
     margin: .25rem;
 }
-/* .parentauthor.activities{
+.imagelink.activities{
     width: 12.5rem;
     height: 9.5rem;
-} */
+}

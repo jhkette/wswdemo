@@ -102,6 +102,8 @@ section {
 }
 
 
+
+
 :root {
   --bg-gray: #eee;
   --line: #b2b3b6b7;
@@ -116,11 +118,33 @@ section {
 }
 
 
-/* @font-face {
-    font-family: GraublauWeb;
-    font-weight: bold;
-    src: url("path/GraublauWebBold.otf") format("opentype");
-} */
+@font-face {
+  font-family: Inter;
+  src: url("./fonts/Inter-Medium.woff2") format("woff2"),
+    url("./fonts/Inter-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Inter-regular;
+  src: url("./fonts/Inter-Regular.woff2") format("woff2"),
+    url("./fonts/Inter-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Inter-italic;
+  src: url("./fonts/Inter-BoldItalic.woff2") format("woff2"),
+    url("./fonts/Inter-BoldItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 body {
   height: 100vh;
@@ -153,7 +177,7 @@ table {
 body {
   font-size: 62.5%;
   color: var(--black);
-  font-family: var(--system-ui);
+  font-family: Inter-regular, sans-serif;
   line-height: 1.7;
 }
 
@@ -162,8 +186,8 @@ body {
 /************* main typography ************** */
 
 h1 {
-  font-family: "Manrope", sans-serif;
-  font-size: 3rem;
+  font-family: Inter-regular, sans-serif;
+  font-size: 3.5rem;
   display: block;
   position: absolute;
   left: 10%;
@@ -179,7 +203,7 @@ h1 {
 }
 
 h2 {
-  font-family: "Manrope", Arial, sans-serif;
+  font-family: Inter-Regular, sans-serif;
   font-size: 1.50rem;
   display: block;
   padding-bottom: .2rem;
@@ -199,7 +223,7 @@ h2 {
 }
 
 h3 {
-  font-family: "Manrope", sans-serif;
+  font-family: Inter-Regular, sans-serif;
   font-size: 1.2rem;
 
   color: var(--black); 
@@ -498,7 +522,7 @@ padding: 1rem 0;
   display: flex;
   flex-direction: column;
   border: 0;
-  padding: 1.5rem 0%;
+  margin: 0 0 5.5rem 0;
 
 }
 
@@ -510,6 +534,12 @@ padding: 1rem 0;
    justify-content: space-between;
   }
 }
+
+.image-container{
+  margin-bottom: 2rem;
+ 
+}
+
 
 .lead article {
   width: 50%;
@@ -730,15 +760,18 @@ padding: 1rem 0;
 /* join button */
 
 .button-container{
-  margin-top: 2rem;
+  position: absolute;
+  top: 23rem;
+  left: 10%;
+  /* margin-top: 2rem; */
 }
 .join {
   border-radius: 0.5rem;
   padding: 0.7rem 1.9rem;
-  border: 0;
-  background-color: var(--red); 
+ 
+  background-color:var(--red);
   margin-top: 2rem;
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   color: white;
   transition: 0.5s;
   text-decoration: none;
@@ -746,7 +779,7 @@ padding: 1rem 0;
 }
 
 .join:hover {
-  background-color: var(--black); 
+  background-color: rgba(219, 219, 219, 0.781); 
   color: white;
   cursor: pointer;
 }
@@ -839,11 +872,12 @@ padding: 1rem 0;
 }
 
 .imagelink {
-  width: 30rem;
+  width: 32rem;
   height: 18rem;
   margin: auto;
   overflow: hidden;
   margin: 0 0em .3rem 0;
+  border: 1px solid var(--gray);
 }
 
 @media only screen and (max-width: 1020px) {
@@ -1075,8 +1109,24 @@ footer nav ul li a {
 .hero-slider {
   position: relative;
   top: 6.4rem;
+  background-image: url('./images/westSuffolkCross2018-1.jpeg');
+  height: 34rem;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
+.hero-slider h1{
+  position: absolute;
+  top: 16rem
+}
+
+
 .hero-slider div {
+  outline: none;
+}
+
+
+/* .hero-slider div {
   outline: none;
 }
 .hero-slider__interior {
@@ -1096,7 +1146,7 @@ footer nav ul li a {
 }
 .hero-slider__overlay {
   margin-left: 10%;
-  /* background-color: rgba(0, 0, 0, 0.68); */
+  background-color: rgba(0, 0, 0, 0.68);
  
   color: #fff;
 }
@@ -1145,7 +1195,7 @@ footer nav ul li a {
   background-color: #fff;
 }
 /* GlideJS */
-.glide__bullets {
+/* .glide__bullets {
   z-index: 100;
   position: absolute;
   left: 0;
@@ -1179,4 +1229,5 @@ footer nav ul li a {
 }
 .glide__bullets button.glide__bullet--active {
   background-color: #fff;
-}
+}  */
+

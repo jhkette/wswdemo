@@ -13,8 +13,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),  // path directory for all files is dist
     filename: "[name].js", // filename for js files - with contenthash
-    clean: true, 
-    assetModuleFilename: "images/[name][ext]", // ensure images go to an images folder
+    // assets go to images - explanation - https://webpack.js.org/guides/asset-modules/
+    assetModuleFilename: "images/[name][ext]",
+   
   },
   devtool: "source-map", // add source map for development purposes
   // set up dev server
@@ -47,8 +48,18 @@ module.exports = {
         },
       },
       {
-        test: /\.(svg|png|jpg|gif)$/i,
-        type: "asset/resource",
+        
+          test: /\.(svg|png|jpg|gif)$/i,
+          type: "asset/resource",
+        
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+        type: 'asset/resource',
+        // i've used a generator to ensure fonts go to fonts folder
+        generator: {
+          filename: 'fonts/[name][ext]'
+        }
       },
     
     ],
