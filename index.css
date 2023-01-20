@@ -109,6 +109,7 @@ section {
   --line: #b2b3b6b7;
   --gray: #848792b7;
   --black: #4a4a4a;
+  --bg-black: #252525;
   --red: #cf0909;
 }
 
@@ -186,24 +187,34 @@ body {
 /************* main typography ************** */
 
 h1 {
-  font-family: Inter-regular, sans-serif;
-  font-size: 3.5rem;
+  font-family: Inter, sans-serif;
+  font-size: 3rem;
   display: block;
-  position: absolute;
-  left: 10%;
-  top: 20rem;
+  
   color: white;
   font-weight: 800;
   /* text-transform: uppercase; */
 }
 
+.hero-slider h1{
+  position: absolute;
+  left: 10%;
+  top: 13rem;
+}
+
 .title-small {
+  position: absolute;
+  left: 10%;
+  top: 17.5rem;
   font-size: 1.9rem;
-  top: 24rem;
+  display: block;
+  color: white;
+  font-weight: 800;
+  border-bottom: 1px solid white;
 }
 
 h2 {
-  font-family: Inter-Regular, sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 1.50rem;
   display: block;
   padding-bottom: .2rem;
@@ -223,7 +234,7 @@ h2 {
 }
 
 h3 {
-  font-family: Inter-Regular, sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 1.2rem;
 
   color: var(--black); 
@@ -649,7 +660,7 @@ padding: 1rem 0;
 
 
 
-.none{
+/* .none{
   display: none;
 }
 
@@ -663,7 +674,7 @@ padding: 1rem 0;
 
 #lead3{
   background-image: url("images/westSuffolkCross2018-1.jpeg");
-}
+} */
 
 .main-body{
   position: relative;
@@ -671,7 +682,12 @@ padding: 1rem 0;
 }
 
 .container-secondary h2 {
-  color: var(--black); 
+  color: white;
+  
+}
+
+.container-secondary p {
+  color: white;
   
 }
 
@@ -745,12 +761,12 @@ padding: 1rem 0;
   display: block;
 
   font-size: 1.2rem;
-  color: var(--black); 
+  color: white;
 }
 
 .container-news a {
 
-  color: var(--black); 
+  color: white; 
   width: 100%;
   display: block;
   padding: 0;
@@ -771,7 +787,7 @@ padding: 1rem 0;
  
   background-color:var(--red);
   margin-top: 2rem;
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   color: white;
   transition: 0.5s;
   text-decoration: none;
@@ -800,7 +816,7 @@ padding: 1rem 0;
 
 /* secondary container */
 .container-secondary {
-  background: var(--bg-gray); 
+  background: var(--bg-black); 
 
   padding: 5.5rem 10%;
   display: flex;
@@ -1104,130 +1120,55 @@ footer nav ul li a {
 
 
 
-/* slider */
 
-.hero-slider {
+.carousel {
+  background: #FAFAFA;
   position: relative;
   top: 6.4rem;
-  background-image: url('./images/westSuffolkCross2018-1.jpeg');
-  height: 34rem;
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 35rem;
 }
 
-.hero-slider h1{
-  position: absolute;
-  top: 16rem
-}
+.carousel-cell {
 
-
-.hero-slider div {
-  outline: none;
-}
-
-
-/* .hero-slider div {
-  outline: none;
-}
-.hero-slider__interior {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-@media (min-width: 960px) {
-  .hero-slider__interior {
-    padding-top: 130px;
-    padding-bottom: 130px;
- }
-}
-.hero-slider__slide {
-  background-size: cover;
-  background-repeat: no-repeat;
+  width: 95%;
+  height: 35rem;
+  margin-right: 10px;
+  background: #FAFAFA;
+  border-radius: 5px;
   background-position: center center;
+  background-size: cover;
 }
-.hero-slider__overlay {
-  margin-left: 10%;
-  background-color: rgba(0, 0, 0, 0.68);
- 
-  color: #fff;
-}
-@media (min-width: 960px) {
-  .hero-slider__overlay {
-    width: 50%;
- }
-}
-.slick-dots {
-  z-index: 100;
-  position: absolute;
-  left: 0;
-  right: 0;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  top: 15px;
-}
-@media (min-width: 960px) {
-  .slick-dots {
-    top: 50px;
- }
-}
-.slick-dots li {
-  list-style: none;
-  display: inline;
-}
-.slick-dots li button {
-  display: inline-block;
-  text-indent: -9999px;
-  font-size: 0;
-  line-height: 0;
-  width: 7px;
-  height: 7px;
-  background-color: rgba(255, 255, 255, 0.5);
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
-  border-radius: 50%;
-  border: none;
-  margin: 0 3px;
-  padding: 0;
-  outline: none;
-  transition: background-color 0.3s ease-out;
-  cursor: pointer;
-}
-.slick-dots .slick-active button {
-  background-color: #fff;
-}
-/* GlideJS */
-/* .glide__bullets {
-  z-index: 100;
-  position: absolute;
-  left: 0;
-  right: 0;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  top: 460px;
-}
-@media (min-width: 960px) {
-  .glide__bullets {
-    top: 460px;
- }
-}
-.glide__bullets button {
-  display: inline-block;
-  text-indent: -9999px;
-  font-size: 0;
-  line-height: 0;
-  width: 12px;
-  height: 12px;
-  background-color: rgba(255, 255, 255, 0.5);
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
-  border-radius: 50%;
-  border: none;
-  margin: 0 7px;
-  padding: 0;
-  outline: none;
-  transition: background-color 0.3s ease-out;
-  cursor: pointer;
-}
-.glide__bullets button.glide__bullet--active {
-  background-color: #fff;
-}  */
 
+
+
+
+
+#lead{
+    background-image: url("images/wsw1.jpeg");
+    background-repeat: no-repeat;
+background-size: cover;
+  }
+
+ 
+  
+  #lead2{
+    background-image: url("images/WSW_AngelHill.jpeg");
+    background-repeat: no-repeat;
+background-size: cover;
+  }
+  
+  #lead3{
+    background-image: url("images/westSuffolkCross2018-1.jpeg");
+    background-repeat: no-repeat;
+background-size: cover;
+  }
+
+.flickity-page-dots{
+  bottom: 25px;
+}
+
+.flickity-page-dots .dot{
+  width: 15px;
+  height: 15px;
+  background: #eee;
+}

@@ -18,6 +18,15 @@ function init() {
 
   // var heroSlider = new HeroSlider();
 
+  const elem = document.querySelector('.carousel');
+const flkty = new Flickity( elem, {
+  // options
+  autoPlay: 5000,
+  "wrapAround": true ,
+  bgLazyLoad: true,
+  contain: true
+});
+
  
   
   const icon = document.getElementById("nav-icon1");

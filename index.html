@@ -16,8 +16,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="./index.css" />
-    <script src="./dist/main.js"></script>
+
 
     <title>Document</title>
   </head>
@@ -62,14 +63,11 @@
         </div>
       </header>
     </div>
-    <div class="hero-slider">
-      <h1>West Suffolk Wheelers</h1>
-      <span class="title-small">Cycling and Triathlon Club</span>
-      <div class="button-container">
-        
-        <a href="#" class="join">Join now!</a>
-      </div>
-      
+    <div class="carousel">
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/640/480/?random" id="lead"><h1>Hello</h1></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/640/481/?random" id="lead2"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/640/482/?random" id="lead3"></div>
+     
     </div>
     <main class="main-body">
       <div class="lead">
@@ -233,4 +231,7 @@
       </div>
    
   </body>
+  <script src="https://unpkg.com/flickity-bg-lazyload@2/bg-lazyload.js"></script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+      <script src="./dist/main.js"></script>
 </html>
