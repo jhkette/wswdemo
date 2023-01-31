@@ -10,13 +10,12 @@ module.exports = {
   mode: "production",
   // define entry file
   entry: "./js/main.js",
-  // define output path - 
+  // define output path -
   output: {
-    path: path.resolve(__dirname, "dist"),  // path directory for all files is dist
-    filename: "[name].js", // filename for js files - with contenthash
+    path: path.resolve(__dirname, "dist"), // path directory for all files is dist
+    filename: "assets/js/[name].js", // filename for js files - with contenthash
     // assets go to images - explanation - https://webpack.js.org/guides/asset-modules/
-    assetModuleFilename: "images/[name][ext]",
-   
+  
   },
   devtool: "source-map", // add source map for development purposes
   // set up dev server
@@ -49,20 +48,20 @@ module.exports = {
         },
       },
       {
-        
-          test: /\.(svg|png|jpg|gif)$/i,
-          type: "asset/resource",
-        
+        test: /\.(svg|png|jpg|gif|jpeg)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "assets/images/[name][ext]",
+        },
       },
       {
         test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
-        type: 'asset/resource',
+        type: "asset/resource",
         // i've used a generator to ensure fonts go to fonts folder
         generator: {
-          filename: 'fonts/[name][ext]'
-        }
+          filename: "assets/fonts/[name][ext]",
+        },
       },
-    
     ],
   },
   optimization: {
@@ -73,32 +72,43 @@ module.exports = {
       new CssMinimizerPlugin(),
       new TerserPlugin({
         include: /\.js$/,
-        exclude: /\.html$/
-      }
-      ),
+        exclude: /\.html$/,
+      }),
     ],
   },
   plugins: [
-    new MiniCssExtractPlugin(),
+    new TerserPlugin({}),
+    new MiniCssExtractPlugin({
+      filename: "assets/css/[name].css",
+      chunkFilename: "assets/css/[name].css",
+    }),
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "index.html",
     }),
     new HtmlWebpackPlugin({
-      filename: 'activities.html',
-      template: 'activities.html',
+      filename: "activities.html",
+      template: "activities.html",
     }),
     new HtmlWebpackPlugin({
-      filename: 'events.html',
-      template: 'events.html',
+      filename: "events.html",
+      template: "events.html",
     }),
     new HtmlWebpackPlugin({
-      filename: 'news.html',
-      template: 'news.html',
+      filename: "news.html",
+      template: "news.html",
     }),
     new HtmlWebpackPlugin({
-      filename: 'info.html',
-      template: 'info.html',
+      filename: "info.html",
+      template: "info.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "calender.html",
+      template: "calender.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "news.html",
+      template: "news.html",
     }),
   ],
 };

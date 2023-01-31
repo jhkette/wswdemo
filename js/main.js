@@ -1,6 +1,8 @@
 // import HeroSlider from "./banner";
+import "../news.css";
 import "../index.css";
 import "../activities.css";
+import "../calender.css";
 import "./../node_modules/@glidejs/glide/dist/css/glide.core.min.css";
 // import "./../fonts/Inter-Medium.woff2"
 // import "./../fonts/Inter-Medium.woff"
@@ -17,7 +19,7 @@ window.addEventListener('load', function () {
 function init() {
 
   // var heroSlider = new HeroSlider();
-
+ 
   const elem = document.querySelector('.carousel');
 const flkty = new Flickity( elem, {
   // options
@@ -196,7 +198,5 @@ const featureEffectRemove = (element) => {
 };
 
 // new Glide('.glide').mount()
-
-
 
 

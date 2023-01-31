@@ -106,7 +106,8 @@ section {
 
 :root {
   --bg-gray: #eee;
-  --line: #b2b3b6b7;
+  --white-line: #4b4b4b;
+  --line: #ababab;
   --gray: #848792b7;
   --black: #4a4a4a;
   --bg-black: #252525;
@@ -222,6 +223,10 @@ h2 {
   color: var(--black);
   border-bottom: 1px solid var(--line); 
   font-weight: 700;
+}
+
+.container-secondary h2{
+  border-bottom: 1px solid var(--white-line) 
 }
 
 .heading-text{
@@ -351,8 +356,12 @@ ul {
  
   z-index: 5;
   transition: 0.8s;
-  border-bottom: 1px solid var(--line); 
+ 
  z-index: 5000;
+}
+
+li.current_page_item {
+  border-bottom: 1px solid var(--red);
 }
 
 .mobile-nav{
@@ -457,6 +466,7 @@ ul {
   top: -80px;
 }
 
+
 .common-links-nav {
   height: 1.5rem;
 
@@ -473,6 +483,12 @@ ul {
 }
 
 .common-links-nav ul li {
+  font-size: 0.8rem;
+  padding: 0;
+  margin-left: 1rem;
+}
+
+.common-links-nav ul li  a{
   font-size: 0.8rem;
   padding: 0;
   margin-left: 1rem;
@@ -524,9 +540,9 @@ padding: 1rem 0;
 .lead {
   display: flex;
   flex-direction: row;
-  padding: 4.5rem 10%;
+  padding: 2.5rem 10% 4rem 10%;
 
-  border-top: 4px solid var(--red); 
+ 
 }
 
 .container-images{
@@ -534,15 +550,25 @@ padding: 1rem 0;
   flex-direction: column;
   border: 0;
   margin: 0 0 5.5rem 0;
+  width: 55%;
+    align-items: flex-end;
+    border-left: 1px solid var(--line);
+    padding-left: 2rem;
+  
 
 }
 
-@media (max-width: 1020px) {
+
+
+
+@media (max-width: 1120px) {
   .container-images{
     width: 100%;
     flex-wrap: wrap;
    flex-direction: row;
    justify-content: space-between;
+   padding: 0;
+   border: 0;
   }
 }
 
@@ -724,6 +750,22 @@ padding: 1rem 0;
   list-style: none;
   color: var(--black); 
 }
+.container-calender{
+  width: 33%;
+  padding-right: 1rem;
+  
+  
+}
+
+@media (max-width: 1120px) {
+  .container-calender{
+    width: 100%;
+    padding: 0;
+    
+    
+  }
+  
+}
 
 .container-calender p {
   padding: 0;
@@ -755,7 +797,10 @@ padding: 1rem 0;
   z-index: 5;
 }
 
-
+.container-calender li{
+  list-style: none;
+  margin: 2rem 0;
+}
 
 .container-news h3 {
   display: block;
@@ -776,10 +821,8 @@ padding: 1rem 0;
 /* join button */
 
 .button-container{
-  position: absolute;
-  top: 23rem;
-  left: 10%;
-  /* margin-top: 2rem; */
+  
+  margin-top: 2rem;
 }
 .join {
   border-radius: 0.5rem;
@@ -795,7 +838,7 @@ padding: 1rem 0;
 }
 
 .join:hover {
-  background-color: rgba(219, 219, 219, 0.781); 
+  background-color: rgba(0, 0, 0, 0.781); 
   color: white;
   cursor: pointer;
 }
@@ -888,15 +931,15 @@ padding: 1rem 0;
 }
 
 .imagelink {
-  width: 32rem;
-  height: 18rem;
+  width: 35rem;
+  height: 22rem;
   margin: auto;
   overflow: hidden;
   margin: 0 0em .3rem 0;
   border: 1px solid var(--gray);
 }
 
-@media only screen and (max-width: 1020px) {
+@media only screen and (max-width: 1120px) {
   .imagelink {
     width: 19rem;
     height: 19rem;
@@ -934,7 +977,7 @@ padding: 1rem 0;
   height:fit-content;
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 1120px) {
   .cal-information{
   width: 100%;
   padding: 0;
@@ -958,7 +1001,7 @@ padding: 1rem 0;
 
 .container-twitter{
   width: 25%;
-  border-left: 1px solid var(--line);
+  border-left: 1px solid var(--white-line);
   padding-left: 3.5rem;
 }
 
@@ -1124,27 +1167,38 @@ footer nav ul li a {
 .carousel {
   background: #FAFAFA;
   position: relative;
-  top: 6.4rem;
+  top: 4.95rem;
   height: 35rem;
+  border-bottom: 4px solid var(--red); 
 }
 
 .carousel-cell {
 
-  width: 95%;
+  width: 100%;
   height: 35rem;
-  margin-right: 10px;
+ 
   background: #FAFAFA;
-  border-radius: 5px;
   background-position: center center;
   background-size: cover;
+  /* background: rgb(2,0,36); */
+
+}
+
+.carousel-cell h1{
+  position: relative;
+  top: 22rem;
+  left: 10%;
+}
+
+
+.flickity-prev-next-button{
+  display: none;
 }
 
 
 
-
-
 #lead{
-    background-image: url("images/wsw1.jpeg");
+    background-image: linear-gradient(49deg, rgba(1, 0, 21, 0.328) 0%, rgba(144, 144, 159, 0.067) 44%, rgba(255,255,255,0) 100%), url("images/wsw1.jpeg");
     background-repeat: no-repeat;
 background-size: cover;
   }
@@ -1152,13 +1206,13 @@ background-size: cover;
  
   
   #lead2{
-    background-image: url("images/WSW_AngelHill.jpeg");
+    background-image: linear-gradient(49deg, rgba(1, 0, 21, 0.328) 0%, rgba(144, 144, 159, 0.067) 44%, rgba(255,255,255,0) 100%), url("images/WSW_AngelHill.jpeg");
     background-repeat: no-repeat;
 background-size: cover;
   }
   
   #lead3{
-    background-image: url("images/westSuffolkCross2018-1.jpeg");
+    background-image: linear-gradient(49deg, rgba(1, 0, 21, 0.328) 0%, rgba(144, 144, 159, 0.067) 44%, rgba(255,255,255,0) 100%), url("images/westSuffolkCross2018-1.jpeg");
     background-repeat: no-repeat;
 background-size: cover;
   }
@@ -1172,3 +1226,17 @@ background-size: cover;
   height: 15px;
   background: #eee;
 }
+
+
+
+/* news page */
+/* .lead.news{
+  flex-direction: column;
+}
+
+.post-item {
+  width: 100%;
+} */
+
+
+

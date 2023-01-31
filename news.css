@@ -1,0 +1,11 @@
+.lead.singlecontainer{
+    flex-direction: column;
+  }
+  .lead.singlecontainer article{
+    width: 100%;
+  }
+  
+  .post-item {
+    width: 100%;
+    margin-bottom: 3rem;
+  }

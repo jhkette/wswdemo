@@ -6,6 +6,7 @@
 
 .lead.subpage{
     border: 0;
+    height: auto;
     justify-content: space-between;
 }
 
@@ -29,12 +30,14 @@
 }
 .activities-container{
     width: 85%;
+    height: auto;
+    padding: 0 0 4rem 0;
 }
 
 .container{
     display: grid;
     grid-template-columns: repeat(3, 250px);
-    grid-template-rows: 200px;
+    grid-template-rows: 250px;
     justify-content: space-around;
     
 }
@@ -45,5 +48,11 @@
 }
 .imagelink.activities{
     width: 12.5rem;
-    height: 9.5rem;
+    height: 10.5rem;
+}
+
+.page-links__title{
+ background-color: #e54d4d2e;
+  border-radius: .5rem;
+  padding: .2rem .45rem 
 }

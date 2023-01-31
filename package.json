@@ -41,6 +41,11 @@
   "homepage": "https://github.com/jhkette/wswdemo#readme",
   "description": "",
   "dependencies": {
+    "@fullcalendar/core": "^6.0.3",
+    "@fullcalendar/daygrid": "^6.0.3",
+    "@fullcalendar/google-calendar": "^6.0.3",
+    "@fullcalendar/list": "^6.0.3",
+    "@fullcalendar/timegrid": "^6.0.3",
     "@glidejs/glide": "^3.6.0",
     "flickity": "^3.0.0",
     "flickity-bg-lazyload": "^2.0.0"
