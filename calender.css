@@ -5,11 +5,11 @@
 
 .lead.singlecontainer{
  margin-top: 9rem;
- width: fit-content;
+
 
 }
 
 .lead.singlecontainer h2{
     display: inline-block;
-    width: auto;
+    width: fit-content;
 }
