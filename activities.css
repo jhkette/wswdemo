@@ -1,7 +1,33 @@
 .main-body-template{
-    position: relative;
-    top: 8.5rem;
+  
     display: block;
+    position: relative;
+    top: 6.5rem;
+}
+
+.secondary-banner {
+    height: 16rem;
+    background-color: var(--bg-black);
+    padding: 2rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+   
+
+}
+
+.secondary-banner h1 {
+    
+    display: inline-block;
+    border-bottom: 1px solid white;
+    padding-right: 4.5rem;
+}
+
+
+.secondary-banner img {
+   
+    position: relative;
+    top: 5rem;
 }
 
 .lead.subpage{
@@ -15,13 +41,27 @@
     margin-right: 4.5rem;
     margin-top: .5rem
 }
+@media (max-width: 1020px) {
+    .secondary-nav{
+        width: 14.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .secondary-nav{
+        width: 100%;
+        padding: 0 10%;
+        margin-right: 0;
+    }
+
+}
 
 .secondary-nav ul{
     list-style: none;
 }
 
 .secondary-nav ul li{
-    padding: 0.5rem .5rem;
+    padding: .2rem .45rem;
     width: 100%;
 }
 
@@ -30,29 +70,61 @@
 }
 .activities-container{
     width: 85%;
-    height: auto;
-    padding: 0 0 4rem 0;
+    min-height: 20rem;;
+    padding: 2rem 0 3rem 0;
 }
 
-.container{
-    display: grid;
-    grid-template-columns: repeat(3, 250px);
-    grid-template-rows: 250px;
-    justify-content: space-around;
+@media (max-width: 1020px) {
+    .activities-container{
+    width: 60%;
+    }
+}
+@media (max-width: 768px) {
+    .activities-container{
+        width: 100%;
+        }
+}
+
+.container-events{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     
 }
 
 .image-container.activities{
     height: 15rem;
-    margin: .25rem;
+    margin: 0 1rem 0 1rem;
+}
+
+.image-container.activities h3{
+    border-bottom: none;
+   
 }
 .imagelink.activities{
     width: 12.5rem;
     height: 10.5rem;
 }
 
+.current_page_item{
+    background-color: var(--bg-gray);
+   
+    padding: .2rem .45rem ;
+    font-weight: 900;
+    width: 100%;
+
+}
+
+.secondary-nav ul li:hover{
+    background-color: var(--bg-gray);
+}
+
 .page-links__title{
- background-color: #e54d4d2e;
-  border-radius: .5rem;
-  padding: .2rem .45rem 
+ font-family: Inter-regular, sans-serif;
+ background-color: rgba(211, 53, 53, 0.272);
+  color: var(--black);
+  padding: .2rem .45rem ;
+  font-weight: 900;
+  width: 100%;
 }

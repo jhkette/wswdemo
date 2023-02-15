@@ -7,5 +7,41 @@
   
   .post-item {
     width: 100%;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
   }
+
+  .highlight-link{
+    background-color: rgba(211,53,53,.272);
+    border-radius: .2rem;
+    display: inline-block;
+    padding: .2rem 1rem;
+    margin-top: 1rem;
+    transition: .2s;
+  }
+
+  .home-link:hover{
+
+    background-color: var(--red);
+    color: #fff;
+
+  }
+
+  .container-reading{
+    display: flex;
+    align-items: center;
+    width: 11rem;
+    justify-content: space-around;
+  }
+
+.blog-category{
+  border-bottom: 2px solid var(--red);
+  transition: .3s;
+}
+
+.blog-category:hover{
+  border-bottom: 2px solid var(--black);
+}
+
+.lead.singlecontainer.news{
+  margin-top: 3.5rem;
+}
