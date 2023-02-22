@@ -1,0 +1,43 @@
+
+.question-answer{
+
+    padding: 4rem 0;
+  }
+  
+  .question-container {
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    background-color: #eee;
+    padding: 1rem 1.35rem;
+    
+  }
+  
+  
+  
+  .answer-container {
+    background-color: #eee;
+    padding: 1rem 1.35rem;
+    width: 90%;
+    display: none;
+    height: 0;
+    transition: 2s;
+  }
+  
+  .answer-container.visible{
+    display: block;
+    height: 100%;
+  }
+  
+  .fa-arrow-down{
+    height: 1.5rem;
+    transition: .3s;
+  }
+  
+  .fa-arrow-down.rotated{
+    transform: rotate(180deg);
+  }
+  

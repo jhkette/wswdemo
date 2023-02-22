@@ -1,202 +1,101 @@
-// import HeroSlider from "./banner";
-import "../news.css";
-import "../index.css";
-import "../activities.css";
-import "../calender.css";
-import "./../node_modules/@glidejs/glide/dist/css/glide.core.min.css";
-// import "./../fonts/Inter-Medium.woff2"
-// import "./../fonts/Inter-Medium.woff"
-// import "./../fonts/Inter-Regular.woff2"
-// import "./../fonts/Inter-Regular.woff"
+import '../news.css';
+import '../index.css';
+import '../activities.css';
+import '../calender.css';
+import '../information.css';
 
+const question = () => {
+  const quanda = document.querySelector('.question-container');
+  if (!quanda) {
+    return;
+  }
 
-
-
-window.addEventListener('load', function () {
-  init();
-});
-
-function init() {
-
-  // var heroSlider = new HeroSlider();
- 
-  const elem = document.querySelector('.carousel');
-const flkty = new Flickity( elem, {
-  // options
-  autoPlay: 5000,
-  "wrapAround": true ,
-  bgLazyLoad: true,
-  contain: true
-});
-
- 
-  
-  const icon = document.getElementById("nav-icon1");
-  icon.addEventListener("click", openNav);
-  const header = document.getElementById("header-container");
-
-  window.addEventListener("scroll", debounce(hideNav));
-  const read = document.querySelectorAll(".readmore");
-
-  read.forEach((element) => {
-    element.addEventListener("mouseover", () => readMore(element));
-    element.addEventListener("mouseleave", () => readMoreLeave(element));
+  quanda.addEventListener('click', (event) => {
+    console.log(event.target.childNodes);
+    const arrow = document.querySelector('.fa-arrow-down');
+    arrow.classList.toggle('rotated');
+    const answer = document.querySelector('.answer-container');
+    answer.classList.toggle('visible');
   });
+};
 
-  const image = document.querySelectorAll(".image-container");
-  console.log(image);
-  image.forEach((element) => {
-    element.addEventListener("mouseover", () => featureEffect(element));
-    element.addEventListener("mouseleave", () => featureEffectRemove(element));
-
-    // element.addEventListener('mouseleave',()=>readMoreLeave(element))
-  });
-
-  //
-
-
-
- 
-}
-
-// icon.addEventListener('click', openNav);
-// var url = window.location.pathname;
-// if (url == "/index.html" || "/") {
-//     setTimeout(function () {
-//         document.getElementById('lead1').classList.remove('none');
-//         document.getElementById('lead2').classList.remove('none');
-//         displayText();
-//        }, 500)
-
-//     bannerLoop();
-// }
-
-// https://www.educative.io/answers/how-to-use-the-debounce-function-in-javascript
-
+// https://www.freecodecamp.org/news/javascript-debounce-example/
 // debounce to stop scroll event firing too often
-function debounce(func, wait = 10, immediate = true) {
-  var timeout;
-  return function () {
-    var context = this,
-      args = arguments;
-    var later = function () {
-      timeout = null;
-      if (!immediate) func.apply(context, args);
-    };
-    var callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (callNow) func.apply(context, args);
+function debounce(func, timeout = 10) {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => { func.apply(this, args); }, timeout);
   };
 }
 
 function hideNav() {
-  var currentScrollPos = window.pageYOffset;
-  // const commonlinks = document.getElementById("commonlinkscontainer");
-  // const logo = document.getElementById("logoimage");
-  // const logonav = document.getElementById("logonav");
-  const common = document.getElementById("commonlinks-cont");
+  const currentScrollPos = window.pageYOffset;
+  const common = document.getElementById('commonlinks-cont');
 
-  const mainheader = document.getElementById("header-container");
-  const logo = document.getElementById("logo");
+  const mainheader = document.getElementById('header-container');
+  const logo = document.getElementById('logo');
 
   if (currentScrollPos > 200) {
-    mainheader.classList.add("small");
-    logo.classList.add("small");
-    common.classList.add("vanish");
-    common.style.display = "none";
-    mainheader.style.opacity = ".95";
+    mainheader.classList.add('small');
+    logo.classList.add('small');
+    common.classList.add('vanish');
+    common.style.display = 'none';
+    mainheader.style.opacity = '.95';
   } else {
-    mainheader.classList.remove("small");
-    logo.classList.remove("small");
-    common.classList.remove("vanish");
-    common.style.display = "block";
-    mainheader.style.opacity = "1";
+    mainheader.classList.remove('small');
+    logo.classList.remove('small');
+    common.classList.remove('vanish');
+    common.style.display = 'block';
+    mainheader.style.opacity = '1';
   }
 }
 
-const formatDate = (date) => {
-  const splitDate = date.split("-");
-
-  const month = getMonth(parseInt(splitDate[1]) - 1);
-  return `${splitDate[2]} ${month} ${splitDate[0]}`;
-};
-
-const getMonth = (month) =>
-  [
-    "January",
-    "Febuary",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ][month];
-
-// async function loadEvents() {
-//   try {
-//     const endpoint = await fetch(`./.netlify/functions/callFetch`);
-//     const data = await endpoint.json();
-//     console.log(data)
-//     const list = document.getElementById("calender-list");
-//     if (data.items.length >= 3) {
-//       data.items.slice(0, 3).map((item) => {
-//         const newLi = document.createElement("li");
-//         const newP3 = document.createElement("h3");
-//         const createAnchor = document.createElement("a");
-//         createAnchor.setAttribute("href", item.htmlLink);
-//         const newContent = document.createTextNode(item.summary);
-//         newP3.append(newContent);
-//         createAnchor.append(newP3);
-//         const newP = document.createElement("p");
-//         const newDesc = document.createTextNode(item.description);
-//         newP.append(newDesc);
-
-//         const newP2 = document.createElement("p");
-//         const date = document.createTextNode(formatDate(item.start.date));
-//         newP2.append(date);
-
-//         newLi.append(createAnchor, newP2, newP);
-//         list.append(newLi);
-//       });
-//     }
-//   } catch (e) {
-//     console.log(e);
-//   }
-// }
-
 const readMore = (element) => {
   const chevron = document.getElementById(element.childNodes[1].id);
-  chevron.classList.add("move");
+  chevron.classList.add('move');
 };
 
 const readMoreLeave = (element) => {
   const chevron = document.getElementById(element.childNodes[1].id);
-  chevron.classList.remove("move");
+  chevron.classList.remove('move');
 };
 
 function openNav() {
-  const mobileNav = document.getElementById("mobile-nav");
-  const icon = document.getElementById("nav-icon1");
-  mobileNav.classList.toggle("open");
-  icon.classList.toggle("open");
+  const mobileNav = document.getElementById('mobile-nav');
+  const icon = document.getElementById('nav-icon1');
+  mobileNav.classList.toggle('open');
+  icon.classList.toggle('open');
 }
 
-const featureEffect = (element) => {
-  const imageContainer = document.getElementById(element.childNodes[3].id);
-  imageContainer.classList.add("line");
-};
 
-const featureEffectRemove = (element) => {
-  const imageContainer = document.getElementById(element.childNodes[3].id);
-  imageContainer.classList.remove("line");
-};
+function init() {
+  const current = window.location.pathname;
+  if (current === '/' || '') {
+    const elem = document.querySelector('.carousel');
+    // eslint-disable-next-line no-unused-vars, no-undef
+    const flkty = new Flickity(elem, {
+      // options
+      autoPlay: 5000,
+      wrapAround: true,
+      bgLazyLoad: true,
+      contain: true,
+    });
+  }
+  question();
+  const icon = document.getElementById('nav-icon1');
+  icon.addEventListener('click', openNav);
 
-// new Glide('.glide').mount()
+  window.addEventListener('scroll', debounce(hideNav));
+  const read = document.querySelectorAll('.readmore');
 
+  read.forEach((element) => {
+    element.addEventListener('mouseover', () => readMore(element));
+    element.addEventListener('mouseleave', () => readMoreLeave(element));
+  });
 
+}
+
+window.addEventListener('load', () => {
+  init();
+});

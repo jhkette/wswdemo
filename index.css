@@ -247,7 +247,7 @@ h3 {
 }
 
 p {
-  font-size:1.1rem;
+  font-size:1.05rem;
   /* font-family: "open sans", serif; */
   padding: 1rem 0;
 }
@@ -922,23 +922,31 @@ display: inline-block;
   
   margin-top: 2rem;
 }
-.join {
+
+
+
+
+.wp-block-button__link{
   border-radius: 0.5rem;
   padding: 0.7rem 1.9rem;
- 
+  width: fit-content;
   background-color:var(--red);
   margin-top: 2rem;
   font-size:1.1rem;
-  color: white;
+
   transition: 0.5s;
   text-decoration: none;
-  
 }
 
-.join:hover {
+
+.wp-block-button__link:hover{
   background-color: rgba(0, 0, 0, 0.781); 
-  color: white;
+
   cursor: pointer;
+}
+
+.wp-block-button__link a {
+  color: white;
 }
 
 /* containers */
@@ -1245,7 +1253,4 @@ footer nav ul li a {
   font-size: .95rem;
   text-decoration: none;
 }
-
-
-
 

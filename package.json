@@ -8,6 +8,7 @@
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.2",
     "css-minimizer-webpack-plugin": "^4.2.2",
+    "eslint-config-airbnb": "^19.0.4",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.7.2",
@@ -27,7 +28,8 @@
   "main": "main.js",
   "scripts": {
     "build": "webpack",
-    "dev": "webpack serve"
+    "dev": "webpack serve",
+    "lint": "./node_modules/.bin/eslint"
   },
   "repository": {
     "type": "git",
@@ -47,7 +49,13 @@
     "@fullcalendar/list": "^6.0.3",
     "@fullcalendar/timegrid": "^6.0.3",
     "@glidejs/glide": "^3.6.0",
-    "flickity": "^3.0.0",
-    "flickity-bg-lazyload": "^2.0.0"
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.34.0",
+    "eslint-plugin-react": "^7.32.2"
+  },
+  "eslintConfig": {
+    "globals": {
+      "window": true
+    }
   }
 }

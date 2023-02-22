@@ -68,7 +68,8 @@ module.exports = {
   optimization: {
     minimize: true,
     minimizer: [
-      // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
+      // For webpack@5 you can use the `...` syntax to extend existing minimizers
+      // (i.e. `terser-webpack-plugin`), uncomment the next line
       // `...`,
       new CssMinimizerPlugin(),
       new TerserPlugin({
@@ -110,6 +111,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "news.html",
       template: "news.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "information.html",
+      template: "information.html",
     }),
   ],
 };
