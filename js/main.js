@@ -5,12 +5,12 @@ import '../calender.css';
 import '../information.css';
 
 const question = () => {
-  const quanda = document.querySelector('.question-container');
-  if (!quanda) {
+  const qAnda = document.querySelector('.question-container');
+  if (!qAnda) {
     return;
   }
 
-  quanda.addEventListener('click', (event) => {
+  qAnda.addEventListener('click', (event) => {
     console.log(event.target.childNodes);
     const arrow = document.querySelector('.fa-arrow-down');
     arrow.classList.toggle('rotated');
