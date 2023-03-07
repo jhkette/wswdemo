@@ -21,7 +21,7 @@
     <title>Document</title>
   </head>
   <body>
-    <nav class="mobile-nav" id="mobile-nav">
+    <nav class="mobile-nav" id="mobile-nav" aria-hidden="true"]>
       <ul>
         <li>Home</li>
         <li><a href="activities.html">Activities</a></li>
@@ -42,7 +42,7 @@
         </nav>
       </div>
       <header class="lead-header">
-        <nav id="logo"></nav>
+        <nav id="logo"><img src="./images/WSW_siteLogo870.png" alt=""/></nav>
         <div>
           <nav class="main-nav">
             <ul>
@@ -61,7 +61,7 @@
         </div>
       </header>
     </div>
-    <div class="carousel">
+    <div class="carousel" id="carousel" role="banner">
       <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/640/480/?random" id="lead"><h1>Yorkshire dales Gran Fondo</h1></div>
       <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/640/481/?random" id="lead2"><h1>75th Anniverary Ride</h1></div>
       <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/640/482/?random" id="lead3"><h1>West Suffolk Cyclocross</h1></div>
@@ -219,10 +219,10 @@
      
     </main>
       <div class="container-footer">
-        <footer>
+        <footer role="contentinfo">
           <div>
             <h3>Information</h3>
-            <nav class="footer">
+            <nav class="footer" role="navigation">
               <ul>
                 <li><a href="#">Calender</a></li>
                 <li><a href="#">Contact</a></li>
@@ -232,7 +232,7 @@
           </div>
           <div>
             <h3>Social</h3>
-            <nav class="footer">
+            <nav class="footer" role="navigation">
               <ul>
                 <li><a href="#">Twitter</a></li>
                 <li><a href="#">Strava</a></li>

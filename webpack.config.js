@@ -12,17 +12,15 @@ module.exports = {
   entry: "./js/main.js",
   // define output path -
   output: {
-    path: path.resolve(__dirname, "dist"), // path directory for all files is dist
-    filename: "assets/js/[name].js", // filename for js files - with contenthash
+    path: path.resolve(__dirname, 'dist'), // path directory for all files is dist
+    filename: 'assets/js/[name].js', // filename for js files - with contenthash
     // assets go to images - explanation - https://webpack.js.org/guides/asset-modules/
-    
-  
   },
-  devtool: "source-map", // add source map for development purposes
+  devtool: 'source-map', // add source map for development purposes
   // set up dev server
   devServer: {
     static: {
-      directory: path.resolve(__dirname, "dist"),
+      directory: path.resolve(__dirname, 'dist'),
     },
 
     open: true,

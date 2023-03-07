@@ -1,7 +1,7 @@
 
 .question-answer{
 
-    padding: 4rem 0;
+    padding: .3rem 0;
   }
   
   .question-container {
@@ -11,29 +11,39 @@
     justify-content: space-between;
     align-content: center;
     align-items: center;
-    background-color: #eee;
-    padding: 1rem 1.35rem;
-    
+   
+    padding: .1rem 1.35rem;
+    border-top: 2px dotted var(--red);
+    border-bottom: 2px dotted var(--red);
   }
   
   
   
   .answer-container {
-    background-color: #eee;
+    background-color: #f6cac98d;
+    border-bottom: 2px dotted var(--red);
     padding: 1rem 1.35rem;
     width: 90%;
-    display: none;
-    height: 0;
-    transition: 2s;
+    visibility: hidden;
+  
+    max-height: 0;
+    transition: max-height 0.9s ease-out;
   }
+ 
   
   .answer-container.visible{
-    display: block;
-    height: 100%;
-  }
+    visibility: visible;
+ 
+    max-height: 1200px;
+    transition: max-height 0.9s ease-in;
+ 
+
+  } 
+ 
+  
   
   .fa-arrow-down{
-    height: 1.5rem;
+    height: 1.3rem;
     transition: .3s;
   }
   

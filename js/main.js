@@ -2,22 +2,7 @@ import '../news.css';
 import '../index.css';
 import '../activities.css';
 import '../calender.css';
-import '../information.css';
-
-const question = () => {
-  const qAnda = document.querySelector('.question-container');
-  if (!qAnda) {
-    return;
-  }
-
-  qAnda.addEventListener('click', (event) => {
-    console.log(event.target.childNodes);
-    const arrow = document.querySelector('.fa-arrow-down');
-    arrow.classList.toggle('rotated');
-    const answer = document.querySelector('.answer-container');
-    answer.classList.toggle('visible');
-  });
-};
+import runAccordion from './accordion';
 
 // https://www.freecodecamp.org/news/javascript-debounce-example/
 // debounce to stop scroll event firing too often
@@ -70,9 +55,8 @@ function openNav() {
 
 
 function init() {
-  const current = window.location.pathname;
-  if (current === '/' || '') {
-    const elem = document.querySelector('.carousel');
+  const elem = document.querySelector(".carousel");
+  if (elem) {
     // eslint-disable-next-line no-unused-vars, no-undef
     const flkty = new Flickity(elem, {
       // options
@@ -82,18 +66,17 @@ function init() {
       contain: true,
     });
   }
-  question();
-  const icon = document.getElementById('nav-icon1');
-  icon.addEventListener('click', openNav);
+  runAccordion();
+  const icon = document.getElementById("nav-icon1");
+  icon.addEventListener("click", openNav);
 
-  window.addEventListener('scroll', debounce(hideNav));
-  const read = document.querySelectorAll('.readmore');
+  window.addEventListener("scroll", debounce(hideNav));
+  const read = document.querySelectorAll(".readmore");
 
   read.forEach((element) => {
-    element.addEventListener('mouseover', () => readMore(element));
-    element.addEventListener('mouseleave', () => readMoreLeave(element));
+    element.addEventListener("mouseover", () => readMore(element));
+    element.addEventListener("mouseleave", () => readMoreLeave(element));
   });
-
 }
 
 window.addEventListener('load', () => {

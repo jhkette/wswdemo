@@ -4,6 +4,7 @@
     "@babel/preset-env": "^7.20.2",
     "@testing-library/dom": "^9.0.0",
     "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/user-event": "^14.4.3",
     "autoprefixer": "^10.4.13",
     "axios": "^1.2.2",
     "babel-eslint": "^10.1.0",
@@ -15,6 +16,7 @@
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-react": "^7.32.2",
     "file-loader": "^6.2.0",
+    "happy-dom": "^8.9.0",
     "html-webpack-plugin": "^5.5.0",
     "jest": "^29.4.3",
     "jsdom": "^21.1.0",
@@ -26,6 +28,7 @@
     "style-loader": "^3.3.1",
     "terser-webpack-plugin": "^5.3.6",
     "url-loader": "^4.1.1",
+    "vitest": "^0.29.1",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.0",
     "webpack-dev-server": "^4.11.1"
@@ -37,7 +40,7 @@
     "build": "webpack",
     "dev": "webpack serve",
     "lint": "./node_modules/.bin/eslint",
-    "test": "jest"
+    "test": "vitest --run --environment happy-dom"
   },
   "repository": {
     "type": "git",
