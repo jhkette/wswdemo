@@ -1,7 +1,7 @@
-import '../news.css';
-import '../index.css';
-import '../activities.css';
-import '../calender.css';
+// import '../news.css';
+// import '../index.css';
+// import '../activities.css';
+// import '../calender.css';
 // import runAccordion from './accordion';
 
 // https://www.freecodecamp.org/news/javascript-debounce-example/
