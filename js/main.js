@@ -2,7 +2,7 @@ import '../news.css';
 import '../index.css';
 import '../activities.css';
 import '../calender.css';
-import runAccordion from './accordion';
+// import runAccordion from './accordion';
 
 // https://www.freecodecamp.org/news/javascript-debounce-example/
 // debounce to stop scroll event firing too often
@@ -55,18 +55,18 @@ function openNav() {
 
 
 function init() {
-  const elem = document.querySelector(".carousel");
-  if (elem) {
-    // eslint-disable-next-line no-unused-vars, no-undef
-    const flkty = new Flickity(elem, {
-      // options
-      autoPlay: 5000,
-      wrapAround: true,
-      bgLazyLoad: true,
-      contain: true,
-    });
-  }
-  runAccordion();
+  // const elem = document.querySelector(".carousel");
+  // if (elem) {
+  //   // eslint-disable-next-line no-unused-vars, no-undef
+  //   const flkty = new Flickity(elem, {
+  //     // options
+  //     autoPlay: 5000,
+  //     wrapAround: true,
+  //     bgLazyLoad: true,
+  //     contain: true,
+  //   });
+  // }
+  // runAccordion();
   const icon = document.getElementById("nav-icon1");
   icon.addEventListener("click", openNav);
 
