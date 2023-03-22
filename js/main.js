@@ -1,11 +1,12 @@
-// import '../news.css';
-// import '../index.css';
-// import '../activities.css';
-// import '../calender.css';
-// import runAccordion from './accordion';
+import '../news.css';
+import '../index.css';
+import '../activities.css';
+import '../calender.css';
+import '../images/trophy-solid.svg';
+import runAccordion from './accordion';
 
 // https://www.freecodecamp.org/news/javascript-debounce-example/
-// debounce to stop scroll event firing too often
+// debounce to stop scroll event firing too often and slowing site down
 function debounce(func, timeout = 10) {
   let timer;
   return (...args) => {
@@ -25,14 +26,12 @@ function hideNav() {
     mainheader.classList.add('small');
     logo.classList.add('small');
     common.classList.add('vanish');
-    common.style.display = 'none';
-    mainheader.style.opacity = '.95';
+    mainheader.classList.add('light');
   } else {
     mainheader.classList.remove('small');
     logo.classList.remove('small');
     common.classList.remove('vanish');
-    common.style.display = 'block';
-    mainheader.style.opacity = '1';
+    mainheader.classList.remove('light');
   }
 }
 
@@ -53,29 +52,28 @@ function openNav() {
   icon.classList.toggle('open');
 }
 
-
 function init() {
-  // const elem = document.querySelector(".carousel");
-  // if (elem) {
-  //   // eslint-disable-next-line no-unused-vars, no-undef
-  //   const flkty = new Flickity(elem, {
-  //     // options
-  //     autoPlay: 5000,
-  //     wrapAround: true,
-  //     bgLazyLoad: true,
-  //     contain: true,
-  //   });
-  // }
-  // runAccordion();
-  const icon = document.getElementById("nav-icon1");
-  icon.addEventListener("click", openNav);
+  const elem = document.querySelector('.carousel');
+  if (elem) {
+    // eslint-disable-next-line no-unused-vars, no-undef
+    const flkty = new Flickity(elem, {
+      // options
+      autoPlay: 5000,
+      wrapAround: true,
+      bgLazyLoad: true,
+      contain: true,
+    });
+  }
+  runAccordion();
+  const icon = document.getElementById('nav-icon1');
+  icon.addEventListener('click', openNav);
 
-  window.addEventListener("scroll", debounce(hideNav));
-  const read = document.querySelectorAll(".readmore");
+  window.addEventListener('scroll', debounce(hideNav));
+  const read = document.querySelectorAll('.readmore');
 
   read.forEach((element) => {
-    element.addEventListener("mouseover", () => readMore(element));
-    element.addEventListener("mouseleave", () => readMoreLeave(element));
+    element.addEventListener('mouseover', () => readMore(element));
+    element.addEventListener('mouseleave', () => readMoreLeave(element));
   });
 }
 

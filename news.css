@@ -1,6 +1,13 @@
 .lead.singlecontainer{
     flex-direction: column;
+    padding-top: 9rem;
   }
+
+  .lead.singlecontainer.news{
+    padding-top: 4rem;
+  }
+
+
   .lead.singlecontainer article{
     width: 100%;
   }
