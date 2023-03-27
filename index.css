@@ -83,9 +83,9 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -158,12 +158,16 @@ q {
   quotes: none;
 }
 blockquote:before,
+
 blockquote:after,
+
 q:before,
+
 q:after {
   content: "";
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -218,7 +222,12 @@ h2 {
 }
 
 .container-secondary h2 {
+  color: white;
   border-bottom: 1px solid var(--white-line);
+}
+
+.container-secondary p {
+  color: white;
 }
 
 .heading-text {
@@ -293,13 +302,6 @@ ul li {
   border-radius: 2px;
   opacity: 1;
   left: 0;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: 0.25s ease-in-out;
-  -moz-transition: 0.25s ease-in-out;
-  -o-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
 }
 
@@ -317,9 +319,6 @@ ul li {
 
 #nav-icon1.open span:nth-child(1) {
   top: 8px;
-  -webkit-transform: rotate(135deg);
-  -moz-transform: rotate(135deg);
-  -o-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
@@ -568,9 +567,9 @@ ul li {
   height: 37rem;
   background-image: linear-gradient(
       49deg,
-      rgba(1, 0, 21, 0.328) 0%,
-      rgba(144, 144, 159, 0.067) 44%,
-      rgba(255, 255, 255, 0) 100%
+      #01001554 0%,
+      #90909f11 44%,
+      #fff0 100%
     ),
     url("images/wsw1.jpeg");
   background-repeat: no-repeat;
@@ -594,9 +593,8 @@ ul li {
 
 @media (max-width: 768px) {
   .carousel-cell {
-    height: 19rem;
+    height: 20rem;
     font-size: 1.75rem;
-    top: 12rem;
     line-height: 1.2;
   }
   
@@ -640,6 +638,7 @@ ul li {
   flex-direction: row;
   margin: 0 0 5.5rem;
   width: 60%;
+  /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -648,6 +647,7 @@ ul li {
   .container-images {
     width: 100%;
     flex-wrap: wrap;
+    /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
     flex-direction: row;
     justify-content: space-between;
     padding: 0;
@@ -659,6 +659,7 @@ ul li {
 .image-container {
   margin-bottom: 2rem;
 }
+
 .image-container h3 {
   padding: 0.4rem 0;
 }
@@ -668,6 +669,7 @@ ul li {
     width: 100%;
     padding-bottom: 3.5rem;
   }
+
   .container-aims {
     width: 100%;
     padding: 0;
@@ -718,7 +720,6 @@ ul li {
 
 .community {
   height: 44px;
-
   filter: invert(7%) sepia(85%) saturate(7352%) hue-rotate(2deg)
     brightness(119%) contrast(109%);
 }
@@ -766,13 +767,7 @@ ul li {
 
 /* secondary container */
 
-.container-secondary h2 {
-  color: white;
-}
 
-.container-secondary p {
-  color: white;
-}
 
 .feature-item {
   padding: 1rem 0;
@@ -917,16 +912,16 @@ ul li {
     align-items: center;
     justify-content: center;
   }
+
   .lead article {
     width: 100%;
-    padding: 0rem;
+    padding: 0;
   }
 }
 
 /* secondary container */
 .container-secondary {
   background: var(--bg-black);
-
   padding: 4.5rem 10%;
   display: flex;
   flex-direction: row;
@@ -939,9 +934,10 @@ ul li {
     align-items: center;
     justify-content: center;
   }
+
   .container-secondary .container-news {
     width: 100%;
-    padding: 0rem;
+    padding: 0;
   }
 }
 
@@ -950,6 +946,7 @@ ul li {
 .container-third {
   display: flex;
   flex-direction: row;
+  /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
   flex-wrap: wrap;
   padding: 4.5rem 10%;
   justify-content: space-between;
@@ -1032,7 +1029,6 @@ ul li {
 .container-twitter img {
   float: left;
   height: 29px;
-
   margin-top: 19px;
   padding-right: 15px;
 }
@@ -1040,6 +1036,7 @@ ul li {
 @media only screen and (max-width: 1020px) {
   .container-twitter {
     width: 100%;
+    /* stylelint-disable-next-line shorthand-property-no-redundant-values */
     padding: 4.5rem 0 0 0;
     border: 0;
   }
@@ -1054,11 +1051,11 @@ ul li {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(208, 24, 21, 0.396);
+  background-color: #d0181565;
 }
 
-.imagelink:hover .authorimage:before,
-.imagelink:focus .authorimage:before {
+.imagelink:hover .authorimage::before,
+.imagelink:focus .authorimage::before {
   display: block;
 }
 

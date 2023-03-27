@@ -1,17 +1,15 @@
 
 .question-answer{
-
     padding: .3rem 0;
   }
   
-  .question-container {
+.question-container {
     display: flex;
     width: 90%;
     flex-direction: row;
     justify-content: space-between;
     align-content: center;
     align-items: center;
-   
     padding: .1rem 1.35rem;
     border-top: 2px dotted var(--red);
     border-bottom: 2px dotted var(--red);
