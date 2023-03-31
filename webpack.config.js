@@ -32,8 +32,9 @@ module.exports = {
       {
         test: /\.s?css$/,
         use: [
-          MiniCssExtractPlugin.loader, //3. Extract css into files
-          "css-loader", //2. Turns css into commonjs
+          MiniCssExtractPlugin.loader, // Extract css and create new files
+          "css-loader", // The css-loader interprets @import and url() like import/require()
+          // and will resolve them.
         ],
       },
       {
