@@ -4,7 +4,6 @@ import {
   it, expect, beforeEach, vi,
 } from 'vitest';
 
-
 const htmlDocPath = path.join(process.cwd(), 'index.html');
 const htmlDocumentContent = fs.readFileSync(htmlDocPath).toString();
 
@@ -36,9 +35,3 @@ it('carousel has children to run', () => {
   const carousel = document.getElementById('carousel');
   expect(carousel.children.length).toBeGreaterThanOrEqual(2);
 });
-
-
-
-
-/// https://stackoverflow.com/questions/61675320/how-to-get-the-child-div-of-parent-div-with-some-test-id-using-react-testing-lib
-// https://testing-library.com/docs/user-event/setup
