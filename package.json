@@ -38,7 +38,7 @@
   "name": "frontpage",
   "version": "1.0.0",
   "main": "main.js",
-  "browserslist": "> 0.25%, not dead" ,
+  "browserslist": "> 0.25%, not dead",
   "scripts": {
     "build": "webpack",
     "dev": "webpack serve",
@@ -62,5 +62,4 @@
       "document": true
     }
   }
-  
 }

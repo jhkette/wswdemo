@@ -33,7 +33,7 @@ module.exports = {
         test: /\.s?css$/,
         use: [
           MiniCssExtractPlugin.loader, // Extract css and create new files
-          "css-loader", // The css-loader interprets @import and url() like import/require()
+          'css-loader', // The css-loader interprets @import and url() like import/require()
           // and will resolve them.
         ],
       },
@@ -41,26 +41,25 @@ module.exports = {
         test: /\.js$/,
         exclude: ['/node_modules/', '/js/**.test.js'],
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
-            presets: ["@babel/preset-env"],
+            presets: ['@babel/preset-env'],
           },
         },
       },
       {
         test: /\.(svg|png|jpg|gif|jpeg)$/i,
-        type: "asset/resource",
-        
+        type: 'asset/resource', 
         generator: {
-          filename: "assets/images/[name][ext]",
+          filename: 'assets/images/[name][ext]',
         },
       },
       {
         test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
-        type: "asset/resource",
+        type: 'asset/resource',
         // i've used a generator to ensure fonts go to fonts folder
         generator: {
-          filename: "assets/fonts/[name][ext]",
+          filename: 'assets/fonts/[name][ext',
         },
       },
     ],
