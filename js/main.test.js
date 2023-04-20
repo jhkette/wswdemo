@@ -7,7 +7,6 @@ import {
 const htmlDocPath = path.join(process.cwd(), 'index.html');
 // read index file and convert contents to string
 const htmlDocumentContent = fs.readFileSync(htmlDocPath).toString();
-
 // create document from window object
 // eslint-disable-next-line no-undef
 const { document } = new Window();

@@ -59,7 +59,7 @@ module.exports = {
         type: 'asset/resource',
         // i've used a generator to ensure fonts go to fonts folder
         generator: {
-          filename: 'assets/fonts/[name][ext',
+          filename: 'assets/fonts/[name][ext]',
         },
       },
     ],

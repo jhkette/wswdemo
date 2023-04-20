@@ -280,12 +280,12 @@ ul li {
 
 #nav-icon1 {
   display: none;
-  width: 28px;
-  height: 30px;
+  width: 26px;
+  height: 28px;
   position: relative;
   transition: 0.5s ease-in-out;
   cursor: pointer;
-  top: 0.35rem;
+
   z-index: 10000;
 }
 
@@ -377,14 +377,14 @@ ul li {
 }
 
 #logo.small  img{
-  width: 291px;
-  height: 60px;
+  width: 250px;
+  height: 52px;
 }
 
 @media (max-width: 1020px) {
   #logo img {
     width: 291px;
-    height: 60px;
+    height: 54px;
   }
 }
 
@@ -498,7 +498,7 @@ ul li {
   position: absolute;
   overflow: hidden;
   top: 0;
-  width: 45%;
+  width: 50%;
   right: -300px;
   background-color: var(--bg-gray);
   transition: 0.2s;
@@ -509,7 +509,7 @@ ul li {
   display: flex;
   flex-direction: column;
   margin-top: 8rem;
-  margin-left: 4rem;
+  margin-left: 2.5rem;
   font-size: 1.1rem;
   font-weight: 600;
 }
@@ -527,7 +527,7 @@ ul li {
   overflow: auto;
   top: 0;
   right: 0;
-  width: 45%;
+  width: 50%;
   z-index: 1501;
   transition: 0.2s;
 }
@@ -554,7 +554,7 @@ ul li {
 }
 @media (max-width: 768px) {
   .carousel {
-    top: 5.95rem;
+    top: 5rem;
   }
 }
 
@@ -652,6 +652,12 @@ ul li {
   }
 }
 
+@media (max-width: 768px) {
+  .container-images {
+    display: none;
+  }
+}
+
 .image-container {
   margin-bottom: 2rem;
 }
@@ -681,9 +687,10 @@ ul li {
 /* //////////////////// list for our aims styling //////////// */
 .list-intro {
   list-style: none;
+  padding: 0.75rem;
 }
 
-.list-intro li {
+.container-aims ul li {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -812,6 +819,12 @@ ul li {
     width: 100%;
     padding: 0;
     border-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-calender {
+    padding-bottom: 2.5rem;
   }
 }
 
@@ -1084,15 +1097,15 @@ ul li {
 }
 
 .authorimage.two {
-  background-image: url("./images/Cycling_12.jpg");
+  background-image: url("./images/cyclocross-event.jpg");
 }
 
 .authorimage.three {
-  background-image: url("./images/cycling-race.jpg");
+  background-image: url("./images/signpost.jpg");
 }
 
 .authorimage.four {
-  background-image: url("./images/group-ride.jpg");
+  background-image: url("./images/signpost.jpg");
 }
 
 /* mobile navigation */
