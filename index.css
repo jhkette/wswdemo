@@ -206,7 +206,6 @@ h1 {
 }
 
 
-
 h2 {
   font-family: Inter, sans-serif;
   font-size: 1.55rem;
@@ -890,33 +889,33 @@ ul li {
   margin-top: 0.5rem;
 }
 
-.join {
+#join  {
   border-radius: 0.5rem;
   padding: 0.7rem 1.9rem;
   width: fit-content;
   background-color: var(--red);
   margin-top: 2rem;
   font-size: 1.1rem;
-  color: #fff;
+  color: #fff !important;
   transition: 0.5s;
   text-decoration: none;
 }
 
-.join:hover  {
+
+
+#join:hover  {
   background-color: #000000c7;
   cursor: pointer;
 }
 
 
-.join:focus  {
+#join:focus  {
   background-color: #000000c7;
   cursor: pointer;
 }
 
 
-.join a {
-  color: white;
-}
+
 
 /* containers */
 

@@ -98,7 +98,32 @@
 .activities-container {
   width: 85%;
   min-height: 20rem;
-  padding: 2rem 0 3rem;
+  padding: 2rem 0 4.5rem;
+}
+
+.activities-container li {
+  font-family: Inter-regular, sans-serif;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  padding: .75rem 0;
+  color: var(--black);
+  
+}
+
+.activities-container ul li {
+  font-family: Inter-regular, sans-serif;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  padding: .75rem 0;
+  color: var(--black);
+  list-style: disc;
+  margin-left: 2rem;
+  
+}
+
+
+.activities-container a {
+  color: var(--red);
 }
 
 @media (max-width: 1020px) {

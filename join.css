@@ -1,0 +1,55 @@
+.join-container{
+    width: 100%;
+    padding: 0  0 1.5rem;
+}
+
+
+
+.list-intro.join-us li{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.list-intro.join-us .button-container a{
+    color: white;
+}
+
+.fa-user{
+  color: var(--red);
+  font-size:40px;
+  margin-right: 25px;
+}
+
+.fa-user-plus{
+    color: var(--red);
+    font-size:28px;
+    margin-right: 25px;
+}
+
+.fa-child{
+    color: var(--red);
+    font-size:48px;
+    margin-right: 25px;
+}
+
+.membership {
+ width: 100%;
+ padding-top: 3rem;
+}
+
+.join-member-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+@media (max-width: 1020px) {
+    .join-member-container{
+        flex-direction: column;
+    }
+}

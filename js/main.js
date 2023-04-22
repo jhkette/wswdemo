@@ -2,6 +2,7 @@ import '../news.css';
 import '../index.css';
 import '../activities.css';
 import '../calender.css';
+import '../join.css';
 import '../images/trophy-solid.svg';
 import runAccordion from './accordion';
 
